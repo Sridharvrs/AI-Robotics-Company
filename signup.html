@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — Stackly Robotics</title>
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><span class="dot"></span>StacklyStackly</a>
+  <div class="nav__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="contact.html">Contact</a>
+  </div>
+  <button class="nav__cta" onclick="location.href='login.html'">Login</button>
+  <div class="nav__toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="overlay"></div>
+<aside class="mobile-menu">
+  <button class="mobile-menu__close">&times;</button>
+  <nav class="mobile-menu__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-menu__spacer"></div>
+  <a href="login.html" class="mobile-menu__login">LOGIN / SIGN UP</a>
+</aside>
+
+<!-- SIGNUP -->
+<section class="signup">
+  <div class="signup__bg"></div>
+  <div class="signup__card reveal" id="signupCard">
+
+    <a href="index.html" class="signup__close" aria-label="Close">&times;</a>
+
+    <div class="signup__head">
+      <div class="signup__logo"><span class="dot"></span>Stackly·ROBOTICS</div>
+      <h1>Create Your Account</h1>
+      <p>Join Stackly Robotics and start building the future</p>
+    </div>
+
+    <!-- ROLE SELECTOR -->
+    <div class="role-selector">
+      <label class="role-label">Select your role</label>
+      <div class="role-options">
+        <button type="button" class="role-btn active" data-role="patient">
+          <i class="fa-solid fa-user"></i>
+          <span>Engineer</span>
+        </button>
+        <button type="button" class="role-btn" data-role="doctor">
+          <i class="fa-solid fa-microscope"></i>
+          <span>Researcher</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form class="signup__form" id="signupForm" Stacklylidate>
+
+      <div class="field">
+        <label for="name">Full Name</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-user input-ic"></i>
+          <input type="text" id="name" placeholder="Enter your full name" autocomplete="name">
+        </div>
+      </div>
+
+      <div class="field">
+        <label id="emailLabel" for="email">Email Address</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-envelope input-ic"></i>
+          <input type="email" id="email" placeholder="you@email.com" autocomplete="email">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock input-ic"></i>
+          <input type="password" id="password" placeholder="Create a strong password" autocomplete="new-password">
+          <button type="button" class="pw-toggle" id="togglePassword" aria-label="Show password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+        <div class="pw-strength" id="pwStrength">
+          <div class="pw-bar"><span></span></div>
+          <span class="pw-label">Password strength</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock input-ic"></i>
+          <input type="password" id="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password">
+          <button type="button" class="pw-toggle" id="toggleConfirmPassword" aria-label="Show password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <label class="remember">
+        <input type="checkbox" id="terms">
+        <span>I accept the <a href="#">Terms &amp; Privacy Policy</a></span>
+      </label>
+
+      <button type="submit" class="btn btn--primary signup-submit">Create Account →</button>
+
+      <div class="signup__message" id="signupMessage" hidden></div>
+    </form>
+
+    <!-- DIVIDER -->
+    <div class="divider"><span>or sign up with</span></div>
+
+    <!-- SOCIAL -->
+    <div class="social-row">
+      <button type="button" class="social-btn"><i class="fa-brands fa-google"></i></button>
+      <button type="button" class="social-btn"><i class="fa-brands fa-github"></i></button>
+      <button type="button" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></button>
+    </div>
+
+    <!-- TOGGLE -->
+    <p class="signup__toggle">Already have an account? <a href="login.html">Sign in</a></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand"><span class="dot"></span>Stackly·ROBOTICS</div><p>Engineering autonomous intelligence for the physical world.</p><div class="footer__social"><a href="#">𝕏</a><a href="#">in</a><a href="#">gh</a><a href="#">▶</a></div></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="research.html">Publications</a></li><li><a href="#">Documentation</a></li><li><a href="#">Press Kit</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Security</a></li><li><a href="login.html">Login</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">© 2026 Stackly Robotics. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>

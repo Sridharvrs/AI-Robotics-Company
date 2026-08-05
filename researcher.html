@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Research Desk — NEXUS LAB</title>
+<meta name="description" content="Researcher dashboard: studies, datasets, experiments, publications and grants." />
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+<div class="shell" data-role="researcher">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <div class="logo-dot">N</div>
+      <div class="t"><b>NEXUS LAB</b><span id="u-unit">Lab Group Theta</span></div>
+    </div>
+    <nav class="nav" id="nav">
+        <div class="nav-label">Modules</div>
+        <button class="nav-item active" data-id="overview"><span class="ico">◆</span><span>Research Desk</span></button>
+        <button class="nav-item" data-id="studies"><span class="ico">⌬</span><span>Studies</span><span class="badge">6</span></button>
+        <button class="nav-item" data-id="datasets"><span class="ico">▤</span><span>Datasets</span><span class="badge">41</span></button>
+        <button class="nav-item" data-id="experiments"><span class="ico">⚗</span><span>Experiment Log</span></button>
+        <button class="nav-item" data-id="publications"><span class="ico">✎</span><span>Publications</span><span class="badge">3</span></button>
+        <button class="nav-item" data-id="grants"><span class="ico">◈</span><span>Grants</span></button>
+        <button class="nav-item" data-id="settings"><span class="ico">⚙</span><span>Preferences</span></button>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="user-chip">
+        <div class="avatar" id="u-initials">LF</div>
+        <div class="m"><b id="u-name" class="current-user">Researcher</b><span id="u-role">Principal Researcher</span></div>
+      </div>
+      <button class="btn-logout" onclick="logout()">⏻ Log out</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      <h2 id="topbar-title">Research Desk</h2>
+      <div class="spacer"></div>
+      <span class="pill hide-xs"><span class="dot"></span> Lab Group Theta</span>
+      <span class="pill" id="clock">--:--:--</span>
+    </header>
+    <main class="content" id="view">
+      <section class="module fade-in" id="mod-overview" data-title="Research Desk">
+        <!--=========================================
+        RESEARCHER WELCOME HERO
+==========================================-->
+
+<section class="research-hero">
+
+    <div class="research-grid"></div>
+
+    <div class="research-glow glow-left"></div>
+    <div class="research-glow glow-right"></div>
+
+    <div class="container">
+
+        <div class="research-wrapper">
+
+            <!-- LEFT -->
+
+            <div class="research-content reveal">
+
+                <span class="research-badge">
+
+                    <span class="research-dot"></span>
+
+                    Research Workspace
+
+                </span>
+
+                <h1 class="research-title">
+
+                    <span id="researchGreeting" class="researchGreeting">
+
+                        Good Morning,
+
+                    </span>
+
+                    <br>
+
+                    <span class="research-name">
+
+                        Dr. <span class="current-user"></span>
+
+                    </span>
+
+                </h1>
+
+                <p class="research-role">
+
+                    Senior AI Research Scientist
+
+                </p>
+
+                <p class="research-desc">
+
+                    Welcome back to your research workspace. Continue
+                    developing intelligent robotics, training advanced AI
+                    models, and publishing inStacklytions that shape the future
+                    of autonomous systems.
+
+                </p>
+
+                <div class="research-actions">
+
+                    <a href="#" class="btn btn--primary">
+
+                        New Research
+
+                    </a>
+
+                    <a href="#" class="btn btn--ghost">
+
+                        View Publications
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="research-card reveal">
+
+                <div class="research-card__top">
+
+                    <span>
+
+                        Research Summary
+
+                    </span>
+
+                    <span class="research-status">
+
+                        ● Active
+
+                    </span>
+
+                </div>
+
+                <div class="research-icon">
+
+                    🧠
+
+                </div>
+
+                <div class="research-info">
+
+                    <div>
+
+                        <small>Current Focus</small>
+
+                        <strong>Embodied AI</strong>
+
+                    </div>
+
+                    <div>
+
+                        <small>Current Phase</small>
+
+                        <strong>Model Training</strong>
+
+                    </div>
+
+                    <div>
+
+                        <small>Research Score</small>
+
+                        <strong>96%</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- QUICK STATS -->
+
+        <div class="research-stats reveal">
+
+            <div class="research-stat">
+
+                <h3>14</h3>
+
+                <span>Published Papers</span>
+
+            </div>
+
+            <div class="research-stat">
+
+                <h3>09</h3>
+
+                <span>AI Models</span>
+
+            </div>
+
+            <div class="research-stat">
+
+                <h3>27</h3>
+
+                <span>Datasets</span>
+
+            </div>
+
+            <div class="research-stat">
+
+                <h3>05</h3>
+
+                <span>Active Projects</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="page-head"><h1>Research Desk</h1><p>Where your studies, datasets and publication pipeline stand this week.</p></div><div class="grid g-4">
+          <div class="card stat">
+    <div class="label">Active studies</div>
+    <div class="value">6</div>
+    <div class="delta ">2 in analysis phase</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Datasets</div>
+    <div class="value">41</div>
+    <div class="delta ">▲ 5 ingested</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Citations (YTD)</div>
+    <div class="value">318</div>
+    <div class="delta ">▲ 12.4%</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Papers in review</div>
+    <div class="value">3</div>
+    <div class="delta down">1 revision due</div>
+  </div>
+        </div>
+        <div class="grid g-2 mt">
+          <div class="card"><h4>Experiment volume — 8 weeks</h4>
+            <div class="chart"><div class="col"><i style="height:36.0655737704918%"></i><span>W1</span></div><div class="col"><i style="height:50.81967213114754%"></i><span>W2</span></div><div class="col"><i style="height:45.90163934426229%"></i><span>W3</span></div><div class="col"><i style="height:72.1311475409836%"></i><span>W4</span></div><div class="col"><i style="height:63.934426229508205%"></i><span>W5</span></div><div class="col"><i style="height:85.24590163934425%"></i><span>W6</span></div><div class="col"><i style="height:77.04918032786885%"></i><span>W7</span></div><div class="col"><i style="height:100%"></i><span>W8</span></div></div>
+          </div>
+          <div class="card"><h4>Study progress</h4>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>THETA-11 · Photonic lattice drift</span><span class="sub">82% · analysis</span>
+    </div>
+    <div class="bar "><i style="width:82%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>THETA-07 · Cryo sample stability</span><span class="sub">64% · data collection</span>
+    </div>
+    <div class="bar alt"><i style="width:64%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>THETA-14 · Model calibration</span><span class="sub">35% · setup</span>
+    </div>
+    <div class="bar "><i style="width:35%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>THETA-03 · Longitudinal replication</span><span class="sub">96% · writing</span>
+    </div>
+    <div class="bar "><i style="width:96%"></i></div>
+  </div>
+          </div>
+        </div>
+        <div class="card mt"><h4>This week</h4>
+          <div class="row"><div><b>Peer review due — Journal of Applied Optics</b><div class="sub">Manuscript #JAO-2211 · Thursday</div></div><span class="tag warn">2 days</span></div>
+          <div class="row"><div><b>Lab meeting — THETA-14 protocol walkthrough</b><div class="sub">Wednesday 15:00</div></div><span class="tag info">scheduled</span></div>
+          <div class="row"><div><b>Grant milestone report</b><div class="sub">NSF-2291 · Q3 deliverable</div></div><span class="tag err">overdue 1d</span></div>
+        </div>
+      </section>
+
+      <section class="module fade-in" id="mod-studies" data-title="Studies" hidden>
+<div class="page-head"><h1>Studies</h1><p>Every protocol you lead or co-investigate, with phase, cohort and ethics state.</p></div><div class="toolbar"><button class="btn">+ New study</button><button class="btn ghost">Import protocol</button><button class="btn ghost">Phase: all</button></div>
+        <div class="card"><div class="table-wrap"><table>
+    <thead><tr><th>Code</th><th>Title</th><th>Phase</th><th>Samples</th><th>Ethics</th><th>Lead</th></tr></thead>
+    <tbody><tr><td>THETA-11</td><td>Photonic lattice drift</td><td>Analysis</td><td>1,204</td><td><span class="tag ok">approved</span></td><td>You</td></tr><tr><td>THETA-07</td><td>Cryo sample stability</td><td>Collection</td><td>860</td><td><span class="tag ok">approved</span></td><td>You</td></tr><tr><td>THETA-14</td><td>Model calibration study</td><td>Setup</td><td>0</td><td><span class="tag warn">in review</span></td><td>R. Iyer</td></tr><tr><td>THETA-03</td><td>Longitudinal replication</td><td>Writing</td><td>3,140</td><td><span class="tag ok">approved</span></td><td>You</td></tr><tr><td>THETA-09</td><td>Noise floor characterisation</td><td>Collection</td><td>512</td><td><span class="tag ok">approved</span></td><td>M. Osei</td></tr><tr><td>THETA-15</td><td>Cross-lab blind trial</td><td>Design</td><td>—</td><td><span class="tag info">drafting</span></td><td>You</td></tr></tbody>
+  </table></div></div>
+        <div class="grid g-3 mt">
+          <div class="card" style="text-align:center"><h4>Recruitment</h4><div class="ring" style="background:conic-gradient(var(--primary) 244.8deg, rgba(120,170,255,.12) 0deg)">
+    <div>68%</div>
+  </div><div style="color:var(--muted);font-size:12px">1,360 of 2,000 target</div></div>
+          <div class="card" style="text-align:center"><h4>Protocol adherence</h4><div class="ring" style="background:conic-gradient(var(--success) 338.40000000000003deg, rgba(120,170,255,.12) 0deg)">
+    <div>94%</div>
+  </div><div style="color:var(--muted);font-size:12px">6 minor deviations logged</div></div>
+          <div class="card" style="text-align:center"><h4>Budget burn</h4><div class="ring" style="background:conic-gradient(var(--accent) 205.20000000000002deg, rgba(120,170,255,.12) 0deg)">
+    <div>57%</div>
+  </div><div style="color:var(--muted);font-size:12px">₹41.2L of ₹72L</div></div>
+        </div>
+      </section>
+
+      <section class="module fade-in" id="mod-datasets" data-title="Datasets" hidden>
+<div class="page-head"><h1>Datasets</h1><p>Raw captures, cleaned derivatives and their provenance chain.</p></div><div class="grid g-4">
+          <div class="card stat">
+    <div class="label">Total volume</div>
+    <div class="value">8.6 TB</div>
+    <div class="delta ">▲ 640 GB this month</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Cleaned</div>
+    <div class="value">29</div>
+    <div class="delta ">71% of corpus</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Quarantined</div>
+    <div class="value">3</div>
+    <div class="delta down">schema mismatch</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Shared externally</div>
+    <div class="value">11</div>
+    <div class="delta ">under DUA</div>
+  </div>
+        </div>
+        <div class="card mt"><div class="table-wrap"><table>
+    <thead><tr><th>Dataset</th><th>Study</th><th>Rows</th><th>Version</th><th>Quality</th><th>Access</th></tr></thead>
+    <tbody><tr><td>lattice_drift_raw</td><td>THETA-11</td><td>4.2 M</td><td>v7</td><td><span class="tag ok">clean</span></td><td>Group</td></tr><tr><td>cryo_thermal_series</td><td>THETA-07</td><td>980 K</td><td>v3</td><td><span class="tag ok">clean</span></td><td>Group</td></tr><tr><td>calib_bench_2026</td><td>THETA-14</td><td>112 K</td><td>v1</td><td><span class="tag warn">unverified</span></td><td>Private</td></tr><tr><td>replication_pooled</td><td>THETA-03</td><td>11.7 M</td><td>v12</td><td><span class="tag ok">clean</span></td><td>Public</td></tr><tr><td>noise_floor_sweep</td><td>THETA-09</td><td>2.1 M</td><td>v2</td><td><span class="tag err">quarantined</span></td><td>Private</td></tr></tbody>
+  </table></div></div>
+        <div class="grid g-2 mt">
+          <div class="card"><h4>Ingest volume by source</h4><div class="chart"><div class="col"><i style="height:47.88732394366197%"></i><span>Bench</span></div><div class="col"><i style="height:73.23943661971832%"></i><span>Cryo</span></div><div class="col"><i style="height:100%"></i><span>Optics</span></div><div class="col"><i style="height:63.38028169014085%"></i><span>Sim</span></div><div class="col"><i style="height:39.436619718309856%"></i><span>Field</span></div><div class="col"><i style="height:26.76056338028169%"></i><span>Partner</span></div></div></div>
+          <div class="card"><h4>Data quality checks</h4>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Schema conformance</span><span class="sub">38 / 41 datasets</span>
+    </div>
+    <div class="bar "><i style="width:93%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Completeness</span><span class="sub">missingness under 2%</span>
+    </div>
+    <div class="bar "><i style="width:88%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Deduplication</span><span class="sub">no duplicate keys</span>
+    </div>
+    <div class="bar "><i style="width:100%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>PII scrub</span><span class="sub">3 pending review</span>
+    </div>
+    <div class="bar alt"><i style="width:76%"></i></div>
+  </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="module fade-in" id="mod-experiments" data-title="Experiment Log" hidden>
+<div class="page-head"><h1>Experiment Log</h1><p>Immutable record of runs, parameters and observed outcomes.</p></div><div class="card"><div class="table-wrap"><table>
+    <thead><tr><th>Run</th><th>Study</th><th>Started</th><th>Duration</th><th>Result</th><th>Reproducible</th></tr></thead>
+    <tbody><tr><td>#R-2291</td><td>THETA-11</td><td>Today 05:10</td><td>3h 22m</td><td><span class="tag ok">signal confirmed</span></td><td>Yes</td></tr><tr><td>#R-2290</td><td>THETA-11</td><td>Yesterday</td><td>3h 18m</td><td><span class="tag ok">signal confirmed</span></td><td>Yes</td></tr><tr><td>#R-2288</td><td>THETA-07</td><td>Yesterday</td><td>11h 04m</td><td><span class="tag warn">partial</span></td><td>Pending</td></tr><tr><td>#R-2284</td><td>THETA-09</td><td>2 days ago</td><td>48m</td><td><span class="tag err">aborted</span></td><td>No</td></tr><tr><td>#R-2280</td><td>THETA-03</td><td>3 days ago</td><td>6h 41m</td><td><span class="tag ok">null result</span></td><td>Yes</td></tr></tbody>
+  </table></div></div>
+        <div class="grid g-2 mt">
+          <div class="card"><h4>Run #R-2291 — parameters</h4>
+            <div class="terminal">
+              <div class="mut">study: THETA-11 · operator: L. Farooq</div>
+              <div>lattice_spacing_nm  = <span class="ok">412.5</span></div>
+              <div>pump_power_mw       = <span class="ok">18.0</span></div>
+              <div>ambient_temp_k      = <span class="ok">4.21</span></div>
+              <div>integration_s       = <span class="ok">120</span></div>
+              <div>seed                = <span class="ok">0x5F2A</span></div>
+              <div class="warn">note: detector gain re-zeroed at t+42m</div>
+            </div>
+          </div>
+          <div class="card"><h4>Outcome distribution — 60 runs</h4><div class="chart"><div class="col"><i style="height:100%"></i><span>Confirm</span></div><div class="col"><i style="height:38.70967741935484%"></i><span>Partial</span></div><div class="col"><i style="height:35.483870967741936%"></i><span>Null</span></div><div class="col"><i style="height:19.35483870967742%"></i><span>Abort</span></div></div></div>
+        </div>
+      </section>
+
+      <section class="module fade-in" id="mod-publications" data-title="Publications" hidden>
+<div class="page-head"><h1>Publications</h1><p>Manuscripts, preprints and the review clock on each of them.</p></div><div class="grid g-4">
+          <div class="card stat">
+    <div class="label">Published</div>
+    <div class="value">27</div>
+    <div class="delta ">4 this year</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Under review</div>
+    <div class="value">3</div>
+    <div class="delta ">median 47 days</div>
+  </div>
+          <div class="card stat">
+    <div class="label">Preprints</div>
+    <div class="value">5</div>
+    <div class="delta ">▲ 1 posted</div>
+  </div>
+          <div class="card stat">
+    <div class="label">h-index</div>
+    <div class="value">19</div>
+    <div class="delta ">▲ 1</div>
+  </div>
+        </div>
+        <div class="card mt"><h4>Pipeline</h4>
+          <div class="row"><div><b>Anomalous drift in cold photonic lattices</b><div class="sub">Nature Photonics · submitted 62 days ago</div></div><span class="tag warn">revision requested</span></div>
+          <div class="row"><div><b>A reproducibility audit of cryo stability protocols</b><div class="sub">PLOS ONE · submitted 21 days ago</div></div><span class="tag info">with reviewers</span></div>
+          <div class="row"><div><b>Noise floor characterisation at sub-4K</b><div class="sub">arXiv preprint · posted 6 days ago</div></div><span class="tag ok">preprint live</span></div>
+          <div class="row"><div><b>Cross-lab blind trial design note</b><div class="sub">Internal draft · 40% complete</div></div><span class="tag">drafting</span></div>
+        </div>
+        <div class="grid g-2 mt">
+          <div class="card"><h4>Citations by year</h4><div class="chart"><div class="col"><i style="height:25.53191489361702%"></i><span>21</span></div><div class="col"><i style="height:40.42553191489361%"></i><span>22</span></div><div class="col"><i style="height:54.25531914893617%"></i><span>23</span></div><div class="col"><i style="height:76.59574468085107%"></i><span>24</span></div><div class="col"><i style="height:100%"></i><span>25</span></div><div class="col"><i style="height:41.48936170212766%"></i><span>26</span></div></div></div>
+          <div class="card"><h4>Co-author network</h4>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Lab Group Theta</span><span class="sub">12 co-authors</span>
+    </div>
+    <div class="bar "><i style="width:46%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>External academic</span><span class="sub">9 institutions</span>
+    </div>
+    <div class="bar alt"><i style="width:34%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Industry partners</span><span class="sub">4 organisations</span>
+    </div>
+    <div class="bar "><i style="width:20%"></i></div>
+  </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="module fade-in" id="mod-grants" data-title="Grants" hidden>
+<div class="page-head"><h1>Grants</h1><p>Funding lines, milestone deliverables and spend against each award.</p></div><div class="card"><div class="table-wrap"><table>
+    <thead><tr><th>Award</th><th>Funder</th><th>Total</th><th>Spent</th><th>Ends</th><th>Status</th></tr></thead>
+    <tbody><tr><td>NSF-2291</td><td>National Science Fdn.</td><td>₹72.0 L</td><td>₹41.2 L</td><td>Mar 2027</td><td><span class="tag warn">report overdue</span></td></tr><tr><td>DST-1140</td><td>Dept. Sci. &amp; Tech.</td><td>₹38.5 L</td><td>₹30.1 L</td><td>Dec 2026</td><td><span class="tag ok">on track</span></td></tr><tr><td>PVT-0092</td><td>Helios Industries</td><td>₹25.0 L</td><td>₹6.4 L</td><td>Aug 2027</td><td><span class="tag ok">on track</span></td></tr><tr><td>SEED-014</td><td>Institute seed fund</td><td>₹5.0 L</td><td>₹5.0 L</td><td>Closed</td><td><span class="tag info">closed out</span></td></tr></tbody>
+  </table></div></div>
+        <div class="grid g-2 mt">
+          <div class="card"><h4>Upcoming deliverables</h4>
+            <div class="list-note"><b>NSF-2291 · Q3 milestone report</b><p>Summarise THETA-11 interim findings, attach the reproducibility appendix and updated spend statement.</p></div>
+            <div class="list-note"><b>DST-1140 · Equipment utilisation log</b><p>Due end of month — cryostat hours and shared-facility bookings need sign-off from the facility manager.</p></div>
+            <div class="list-note"><b>PVT-0092 · Quarterly partner review</b><p>Slide deck plus a redacted dataset summary under the existing data-use agreement.</p></div>
+          </div>
+          <div class="card"><h4>Spend split</h4>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Personnel</span><span class="sub">₹44.9 L</span>
+    </div>
+    <div class="bar "><i style="width:54%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Equipment</span><span class="sub">₹21.6 L</span>
+    </div>
+    <div class="bar alt"><i style="width:26%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Consumables</span><span class="sub">₹10.0 L</span>
+    </div>
+    <div class="bar "><i style="width:12%"></i></div>
+  </div>
+            <div style="margin-bottom:16px">
+    <div class="row" style="border:none;padding:0 0 8px">
+      <span>Travel &amp; dissemination</span><span class="sub">₹6.2 L</span>
+    </div>
+    <div class="bar alt"><i style="width:8%"></i></div>
+  </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="module fade-in" id="mod-settings" data-title="Preferences" hidden>
+<div class="page-head"><h1>Preferences</h1><p>Notifications, data-sharing defaults and account access.</p></div><div class="grid g-2">
+          <div class="card"><h4>Notifications</h4>
+            <div class="row"><div><b>Review deadlines</b><div class="sub">Email, 3 days before</div></div><span class="tag ok">on</span></div>
+            <div class="row"><div><b>Dataset ingest complete</b><div class="sub">In-app only</div></div><span class="tag ok">on</span></div>
+            <div class="row"><div><b>Citation alerts</b><div class="sub">Weekly digest, Mondays</div></div><span class="tag ok">on</span></div>
+            <div class="row"><div><b>Grant reminders</b><div class="sub">Email + SMS</div></div><span class="tag warn">SMS off</span></div>
+          </div>
+          <div class="card"><h4>Session &amp; access</h4>
+            <div class="row"><span>Role</span><span class="tag info">researcher</span></div>
+            <div class="row"><span>Scopes</span><span class="sub">study:write · dataset:read · publish:submit</span></div>
+            <div class="row"><span>ORCID</span><span class="sub">0000-0002-4417-1189</span></div>
+            <div class="row"><span>Default sharing</span><span class="tag warn">group only</span></div>
+            <div class="toolbar" style="margin:16px 0 0"><button class="btn ghost">Manage collaborators</button><button class="btn ghost">Download my data</button></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

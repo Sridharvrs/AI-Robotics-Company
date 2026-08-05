@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Stackly Robotics</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><span class="dot"></span>StacklyStackly</a>
+  <div class="nav__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html" class="active">Products</a><a href="contact.html">Contact</a>
+  </div>
+  <button class="nav__cta" onclick="location.href='login.html'">Login</button>
+  <div class="nav__toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="overlay"></div>
+<aside class="mobile-menu">
+  <button class="mobile-menu__close">&times;</button>
+  <nav class="mobile-menu__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html" class="active">Products</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-menu__spacer"></div>
+  <a href="login.html" class="mobile-menu__login">LOGIN / SIGN UP</a>
+</aside>
+
+<!-- 1. HERO -->
+<section class="p-hero">
+  <div class="p-hero__glow"></div>
+  <div class="container p-hero__inner">
+    <span class="eyebrow">Our Products</span>
+    <h1 class="p-hero__title">Machines That <span class="text-grad">Work</span></h1>
+    <p class="p-hero__desc">A family of robots and software platforms engineered for real-world deployment — built to be precise, safe, and endlessly adaptable.</p>
+    <div class="p-hero__filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="arm">Arms</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="software">Software</button>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PRODUCT GRID -->
+<section class="products">
+  <div class="container">
+    <div class="prod-grid reveal" id="prodGrid">
+      <article class="prod-card" data-cat="arm"><div class="prod-visual pv1"><span class="prod-tag">Arm</span></div><div class="prod-body"><h3>StacklyArm X7</h3><p>7-DOF collaborative manipulator with 0.02mm repeatability and 5kg payload.</p><div class="prod-specs"><span>7 DOF</span><span>5kg</span><span>±0.02mm</span></div><a href="login.html" class="btn btn--ghost">Details</a></div></article>
+      <article class="prod-card" data-cat="mobile"><div class="prod-visual pv2"><span class="prod-tag">Mobile</span></div><div class="prod-body"><h3>StacklyRover M2</h3><p>Autonomous mobile robot for warehouse logistics, 2m/s, 200kg payload.</p><div class="prod-specs"><span>2 m/s</span><span>200kg</span><span>L4 Autonomy</span></div><a href="login.html" class="btn btn--ghost">Details</a></div></article>
+      <article class="prod-card" data-cat="software"><div class="prod-visual pv3"><span class="prod-tag">Software</span></div><div class="prod-body"><h3>StacklyCore SDK</h3><p>Unified perception-planning-control SDK for custom robot development.</p><div class="prod-specs"><span>ROS 2</span><span>Python/C++</span><span>Edge AI</span></div><a href="login.html" class="btn btn--ghost">Details</a></div></article>
+      <article class="prod-card" data-cat="arm"><div class="prod-visual pv4"><span class="prod-tag">Arm</span></div><div class="prod-body"><h3>StacklyArm L3</h3><p>Lightweight 4-DOF arm for electronics assembly and lab automation.</p><div class="prod-specs"><span>4 DOF</span><span>1kg</span><span>±0.05mm</span></div><a href="login.html" class="btn btn--ghost">Details</a></div></article>
+      <article class="prod-card" data-cat="mobile"><div class="prod-visual pv5"><span class="prod-tag">Mobile</span></div><div class="prod-body"><h3>StacklyDrone A1</h3><p>Autonomous inspection drone with 45-min flight and AI-based defect detection.</p><div class="prod-specs"><span>45 min</span><span>4K+Thermal</span><span>GPS-denied</span></div><a href="login.html" class="btn btn--ghost">Details</a></div></article>
+      <article class="prod-card" data-cat="software"><div class="prod-visual pv6"><span class="prod-tag">Software</span></div><div class="prod-body"><h3>StacklyFleet Cloud</h3><p>Cloud orchestration for fleets of 1 to 10,000 robots with live dashboards.</p><div class="prod-specs"><span>Scalable</span><span>Real-time</span><span>OTA</span></div><a href="login.html" class="btn btn--ghost">Details</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!--=========================================
+            PRODUCT IN ACTION
+==========================================-->
+
+<section class="product-action">
+
+    <div class="product-action__bg">
+
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80"
+            alt="Stackly Robotics">
+
+        <div class="product-action__overlay"></div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- Floating Content -->
+
+        <div class="product-action__hero reveal">
+
+            <span class="eyebrow">
+
+                Product In Action
+
+            </span>
+
+            <h2 class="section-title">
+
+                Experience
+                <span class="text-grad">
+                    Stackly Robots
+                </span>
+
+                In The Real World
+
+            </h2>
+
+            <p class="section-sub">
+
+                From warehouses to hospitals, our autonomous systems
+                deliver precision, intelligence, and unmatched
+                performance across every industry.
+
+            </p>
+
+            <a href="#" class="play-btn">
+
+                <span class="play-circle">
+
+                    ▶
+
+                </span>
+
+                <div>
+
+                    <strong>Watch Demo</strong>
+
+                    <small>2 Min Product Overview</small>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <!--==============================
+                INDUSTRY CARDS
+        ==============================-->
+
+        <div class="action-grid reveal">
+
+            <!-- Card 1 -->
+
+            <article class="action-card">
+
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80"
+                    alt="Warehouse">
+
+                <div class="action-card__overlay"></div>
+
+                <div class="action-card__content">
+
+                    <span>Warehouse</span>
+
+                    <h3>Inventory Automation</h3>
+
+                </div>
+
+            </article>
+
+            <!-- Card 2 -->
+
+            <article class="action-card">
+
+                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=900&q=80"
+                    alt="Factory">
+
+                <div class="action-card__overlay"></div>
+
+                <div class="action-card__content">
+
+                    <span>Manufacturing</span>
+
+                    <h3>Smart Factory Robots</h3>
+
+                </div>
+
+            </article>
+
+            <!-- Card 3 -->
+
+            <article class="action-card">
+
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80"
+                    alt="Healthcare">
+
+                <div class="action-card__overlay"></div>
+
+                <div class="action-card__content">
+
+                    <span>Healthcare</span>
+
+                    <h3>Medical Assistance</h3>
+
+                </div>
+
+            </article>
+
+            <!-- Card 4 -->
+
+            <article class="action-card">
+
+                <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=900&q=80"
+                    alt="Drone">
+
+                <div class="action-card__overlay"></div>
+
+                <div class="action-card__content">
+
+                    <span>Drones</span>
+
+                    <h3>Infrastructure Inspection</h3>
+
+                </div>
+
+            </article>
+
+            <!-- Card 5 -->
+
+            <article class="action-card">
+
+                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80"
+                    alt="Agriculture">
+
+                <div class="action-card__overlay"></div>
+
+                <div class="action-card__content">
+
+                    <span>Agriculture</span>
+
+                    <h3>Smart Farming</h3>
+
+                </div>
+
+            </article>
+
+            <!-- Card 6 -->
+
+            <article class="action-card">
+
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80"
+                    alt="Smart City">
+
+                <div class="action-card__overlay"></div>
+
+                <div class="action-card__content">
+
+                    <span>Smart Cities</span>
+
+                    <h3>Urban Intelligence</h3>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 3. FEATURED PAPER -->
+<section class="featured-paper">
+  <div class="container fp__grid">
+    <div class="reveal fp__visual">
+      <div class="fp__chart">
+        <div class="bar" style="height:40%"></div>
+        <div class="bar" style="height:65%"></div>
+        <div class="bar" style="height:80%"></div>
+        <div class="bar" style="height:55%"></div>
+        <div class="bar" style="height:92%"></div>
+        <div class="bar" style="height:73%"></div>
+      </div>
+    </div>
+    <div class="reveal fp__text">
+      <span class="eyebrow">Featured Publication</span>
+      <h2 class="section-title">StacklyField: Real-Time<br>Neural Scene Representations<br>for <span class="text-accent">Robotic Manipulation</span></h2>
+      <p class="section-sub">We introduce a continuous neural field representation that enables robots to reconstruct and reason about novel scenes in under 50ms — a 24× speedup over prior methods.</p>
+      <div class="fp__meta">
+        <div><b>Conference</b><span>CoRL 2026</span></div>
+        <div><b>Citations</b><span>142</span></div>
+        <div><b>Code</b><span>Open Source</span></div>
+      </div>
+      <a href="#" class="btn btn--primary">Read Paper →</a>
+    </div>
+  </div>
+</section>
+
+<!--=========================================
+        INDUSTRIES USING THIS PRODUCT
+==========================================-->
+
+<section class="industries">
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="industries__head reveal">
+
+            <span class="eyebrow">
+                Industries Using This Product
+            </span>
+
+            <h2 class="section-title">
+
+                Trusted Across
+                <span class="text-grad">
+                    Every Industry
+                </span>
+
+            </h2>
+
+            <p class="section-sub">
+
+                Stackly Robotics products power automation across manufacturing,
+                healthcare, logistics, agriculture, mining, and smart cities,
+                helping organizations improve productivity, safety, and
+                operational intelligence.
+
+            </p>
+
+        </div>
+
+        <!--==================================
+                01
+        ===================================-->
+
+        <div class="industry reveal">
+
+            <div class="industry__image">
+
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
+                    alt="Warehouse">
+
+                <span class="industry__number">01</span>
+
+            </div>
+
+            <div class="industry__content">
+
+                <span class="industry__tag">
+
+                    Warehouse Logistics
+
+                </span>
+
+                <h3>
+
+                    Intelligent Warehouse Automation
+
+                </h3>
+
+                <p>
+
+                    Autonomous robots streamline inventory management,
+                    order fulfillment, and warehouse navigation with
+                    AI-powered precision.
+
+                </p>
+
+                <div class="industry__stats">
+
+                    <span>240+ Deployments</span>
+
+                    <span>99.8% Accuracy</span>
+
+                    <span>24/7 Operations</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==================================
+                02
+        ===================================-->
+
+        <div class="industry industry--reverse reveal">
+
+            <div class="industry__image">
+
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
+                    alt="Healthcare">
+
+                <span class="industry__number">02</span>
+
+            </div>
+
+            <div class="industry__content">
+
+                <span class="industry__tag">
+
+                    Healthcare
+
+                </span>
+
+                <h3>
+
+                    Precision Medical Robotics
+
+                </h3>
+
+                <p>
+
+                    Supporting surgeons and healthcare professionals
+                    with AI-assisted diagnostics, patient care,
+                    and surgical precision.
+
+                </p>
+
+                <div class="industry__stats">
+
+                    <span>18 Hospitals</span>
+
+                    <span>AI Assisted</span>
+
+                    <span>Safe Operations</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==================================
+                03
+        ===================================-->
+
+        <div class="industry reveal">
+
+            <div class="industry__image">
+
+                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80"
+                    alt="Manufacturing">
+
+                <span class="industry__number">03</span>
+
+            </div>
+
+            <div class="industry__content">
+
+                <span class="industry__tag">
+
+                    Manufacturing
+
+                </span>
+
+                <h3>
+
+                    Smart Factory Automation
+
+                </h3>
+
+                <p>
+
+                    AI-powered robotic arms automate assembly,
+                    inspection, welding, and packaging with
+                    exceptional consistency.
+
+                </p>
+
+                <div class="industry__stats">
+
+                    <span>350+ Robots</span>
+
+                    <span>99.9% Uptime</span>
+
+                    <span>Zero Downtime</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==================================
+                04
+        ===================================-->
+
+        <div class="industry industry--reverse reveal">
+
+            <div class="industry__image">
+
+                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80"
+                    alt="Agriculture">
+
+                <span class="industry__number">04</span>
+
+            </div>
+
+            <div class="industry__content">
+
+                <span class="industry__tag">
+
+                    Agriculture
+
+                </span>
+
+                <h3>
+
+                    AI Powered Smart Farming
+
+                </h3>
+
+                <p>
+
+                    Intelligent robots monitor crops, analyze soil,
+                    and automate harvesting for sustainable agriculture.
+
+                </p>
+
+                <div class="industry__stats">
+
+                    <span>120 Farms</span>
+
+                    <span>40% Less Water</span>
+
+                    <span>Higher Yield</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==================================
+                05
+        ===================================-->
+
+        <div class="industry reveal">
+
+            <div class="industry__image">
+
+                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80"
+                    alt="Mining">
+
+                <span class="industry__number">05</span>
+
+            </div>
+
+            <div class="industry__content">
+
+                <span class="industry__tag">
+
+                    Mining & Energy
+
+                </span>
+
+                <h3>
+
+                    Safe Operations In Extreme Conditions
+
+                </h3>
+
+                <p>
+
+                    Autonomous inspection robots work in hazardous
+                    environments while improving worker safety and
+                    operational efficiency.
+
+                </p>
+
+                <div class="industry__stats">
+
+                    <span>Zero Exposure</span>
+
+                    <span>Heavy Payload</span>
+
+                    <span>Remote Control</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==================================
+                06
+        ===================================-->
+
+        <div class="industry industry--reverse reveal">
+
+            <div class="industry__image">
+
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80"
+                    alt="Smart City">
+
+                <span class="industry__number">06</span>
+
+            </div>
+
+            <div class="industry__content">
+
+                <span class="industry__tag">
+
+                    Smart Cities
+
+                </span>
+
+                <h3>
+
+                    Building The Cities Of Tomorrow
+
+                </h3>
+
+                <p>
+
+                    From infrastructure monitoring to intelligent
+                    traffic systems, Stackly products help create
+                    safer and smarter urban environments.
+
+                </p>
+
+                <div class="industry__stats">
+
+                    <span>42 Cities</span>
+
+                    <span>AI Monitoring</span>
+
+                    <span>Real-Time Analytics</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 3. FEATURE COMPARISON -->
+<section class="compare">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:40px">
+      <span class="eyebrow">Compare</span>
+      <h2 class="section-title">Find Your <span class="text-accent">Match</span></h2>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="compare-table">
+        <thead><tr><th>Feature</th><th>StacklyArm X7</th><th>StacklyRover M2</th><th>StacklyDrone A1</th></tr></thead>
+        <tbody>
+          <tr><td>Payload</td><td>5 kg</td><td>200 kg</td><td>0.5 kg</td></tr>
+          <tr><td>Precision</td><td>±0.02 mm</td><td>±50 mm</td><td>±10 cm</td></tr>
+          <tr><td>Autonomy</td><td>Collaborative</td><td>L4</td><td>L3</td></tr>
+          <tr><td>Runtime</td><td>Continuous</td><td>10 hrs</td><td>45 min</td></tr>
+          <tr><td>Sensors</td><td>Force + Vision</td><td>Lidar + Camera</td><td>4K + Thermal</td></tr>
+          <tr><td>Best For</td><td>Assembly</td><td>Logistics</td><td>Inspection</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 4. HIGHLIGHT / SHOWCASE -->
+<section class="showcase">
+  <div class="container showcase__grid">
+    <div class="reveal showcase__text">
+      <span class="eyebrow">Spotlight</span>
+      <h2 class="section-title">StacklyArm X7<br><span class="text-grad">Precision Redefined</span></h2>
+      <p class="section-sub">Our flagship manipulator combines harmonic drive joints, integrated torque sensing, and on-board AI to deliver human-like dexterity in a compact, safe package.</p>
+      <div class="showcase__feats">
+        <div><b>0.02mm</b><span>Repeatability</span></div>
+        <div><b>7</b><span>Degrees of freedom</span></div>
+        <div><b>IP67</b><span>Ingress protection</span></div>
+      </div>
+      <a href="login.html" class="btn btn--primary">Request a Demo</a>
+    </div>
+    <div class="reveal showcase__visual">
+      <div class="sv-rings"><div class="sv-ring"></div><div class="sv-ring"></div><div class="sv-ring"></div></div>
+      <div class="sv-core">X7</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:50px">
+      <span class="eyebrow">Customer Voices</span>
+      <h2 class="section-title">Trusted in the <span class="text-grad">Field</span></h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="tcard"><div class="tcard__stars">★★★★★</div><p>"StacklyArm X7 cut our assembly defects by 73% in the first quarter. The precision is unreal."</p><div class="tcard__author"><div class="ta1"></div><div><b>Lena Ortiz</b><span>VP Ops, Helix Labs</span></div></div></div>
+      <div class="tcard"><div class="tcard__stars">★★★★★</div><p>"The StacklyRover fleet runs our warehouse 24/7. ROI in under 9 months — couldn't be happier."</p><div class="tcard__author"><div class="ta2"></div><div><b>Marcus Chen</b><span>CTO, Nexus Auto</span></div></div></div>
+      <div class="tcard"><div class="tcard__stars">★★★★★</div><p>"StacklyCore SDK let us ship a custom inspection bot in 6 weeks. The tooling is exceptional."</p><div class="tcard__author"><div class="ta3"></div><div><b>Priya Nair</b><span>Robotics Lead, Vanta Corp</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. ACCESSORIES -->
+<section class="accessories">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:40px">
+      <span class="eyebrow">Ecosystem</span>
+      <h2 class="section-title">Accessories &amp; <span class="text-accent">Add-ons</span></h2>
+    </div>
+    <div class="grid-4 reveal">
+      <div class="acc-card"><div class="acc-ic">✋</div><h4>Adaptive Gripper</h4><p>3-finger electric gripper with tactile feedback.</p></div>
+      <div class="acc-card"><div class="acc-ic">👁</div><h4>Vision Kit</h4><p>Stereo + depth camera module, plug-and-play.</p></div>
+      <div class="acc-card"><div class="acc-ic">🔋</div><h4>Power Module</h4><p>Hot-swappable battery for extended uptime.</p></div>
+      <div class="acc-card"><div class="acc-ic">📡</div><h4>Comms Hub</h4><p>5G + Wi-Fi 6E gateway for fleet connectivity.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CTA -->
+<section class="cta">
+  <div class="container cta__inner reveal">
+    <h2 class="section-title">Ready to Deploy?</h2>
+    <p class="section-sub">Talk to our team about the right robot for your operation.</p>
+    <a href="login.html" class="btn btn--accent">Get a Quote</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand"><span class="dot"></span>Stackly·ROBOTICS</div><p>Engineering autonomous intelligence for the physical world.</p><div class="footer__social"><a href="#">𝕏</a><a href="#">in</a><a href="#">gh</a><a href="#">▶</a></div></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="research.html">Publications</a></li><li><a href="#">Documentation</a></li><li><a href="#">Press Kit</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Security</a></li><li><a href="login.html">Login</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">© 2026 Stackly Robotics. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

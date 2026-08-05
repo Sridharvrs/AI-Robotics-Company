@@ -1,0 +1,1196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engineer Console — NEXUS LAB</title>
+    <meta
+      name="description"
+      content="Engineer dashboard: fleet telemetry, pipelines, assets and work orders."
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="shell" data-role="engineer">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <div class="logo-dot">N</div>
+          <div class="t">
+            <b>NEXUS LAB</b><span id="u-unit">Infra Cell 04</span>
+          </div>
+        </div>
+        <nav class="nav" id="nav">
+          <div class="nav-label">Modules</div>
+          <button class="nav-item active" data-id="overview">
+            <span class="ico">◆</span><span>Mission Control</span>
+          </button>
+          <button class="nav-item" data-id="assets">
+            <span class="ico">▣</span><span>Asset Registry</span
+            ><span class="badge">38</span>
+          </button>
+          <button class="nav-item" data-id="pipelines">
+            <span class="ico">⇶</span><span>Build Pipelines</span>
+          </button>
+          <button class="nav-item" data-id="telemetry">
+            <span class="ico">∿</span><span>Telemetry</span>
+          </button>
+          <button class="nav-item" data-id="tickets">
+            <span class="ico">⚑</span><span>Work Orders</span
+            ><span class="badge">9</span>
+          </button>
+          <button class="nav-item" data-id="docs">
+            <span class="ico">❐</span><span>Runbooks</span>
+          </button>
+          <button class="nav-item" data-id="settings">
+            <span class="ico">⚙</span><span>Preferences</span>
+          </button>
+        </nav>
+        <div class="sidebar-foot">
+          <div class="user-chip">
+            <div class="avatar" id="u-initials">ER</div>
+            <div class="m">
+              <b id="u-name" class="current-user">Engineer</b
+              ><span id="u-role">Systems Engineer</span>
+            </div>
+          </div>
+          <button class="btn-logout" onclick="logout()">⏻ Log out</button>
+        </div>
+      </aside>
+
+      <div class="overlay" id="overlay"></div>
+
+      <div class="main">
+        <header class="topbar">
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            ☰
+          </button>
+          <h2 id="topbar-title">Mission Control</h2>
+          <div class="spacer"></div>
+          <span class="pill hide-xs"
+            ><span class="dot"></span> All systems nominal</span
+          >
+          <span class="pill" id="clock">--:--:--</span>
+        </header>
+        <main class="content" id="view">
+          <section
+            class="module fade-in"
+            id="mod-overview"
+            data-title="Mission Control"
+          >
+
+          <!--=========================================
+        ENGINEER DASHBOARD HERO
+==========================================-->
+
+<section class="engineer-hero">
+
+    <!-- Background Effects -->
+
+    <div class="engineer-grid"></div>
+
+    <div class="engineer-glow glow-1"></div>
+    <div class="engineer-glow glow-2"></div>
+
+    <div class="container">
+
+        <div class="engineer-hero__wrapper">
+
+            <!--==================================
+                    LEFT
+            ===================================-->
+
+            <div class="engineer-content reveal">
+
+                <span class="hero-badge">
+
+                    <span class="status-dot"></span>
+
+                    AI Command Center Online
+
+                </span>
+
+                <h1 class="engineer-title">
+
+                    <span id="researchGreeting" class="researchGreeting">
+
+                        Good Morning,
+
+                    </span>
+
+                    <br>
+
+                    <span class="engineer-name current-user">
+
+                        Sridhar
+
+                    </span>
+
+                    👋
+
+                </h1>
+
+                <p class="engineer-role">
+
+                    Robotics Systems Engineer
+
+                </p>
+
+                <p class="engineer-desc">
+
+                    Welcome back to the Stackly Robotics Engineer Dashboard.
+                    Monitor robotic systems, manage deployments, review
+                    active projects, and ensure every machine operates
+                    at maximum efficiency.
+
+                </p>
+
+                <div class="mission-box">
+
+                    <div class="mission-icon">
+
+                        🎯
+
+                    </div>
+
+                    <div>
+
+                        <small>
+
+                            TODAY'S MISSION
+
+                        </small>
+
+                        <h4 id="missionQuote">
+
+                            Building the future, one robot at a time.
+
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--==================================
+                    RIGHT
+            ===================================-->
+
+            <div class="engineer-side reveal">
+
+                <div class="system-panel">
+
+                    <div class="system-header">
+
+                        <span>
+
+                            AI Core
+
+                        </span>
+
+                        <span class="online">
+
+                            ● ONLINE
+
+                        </span>
+
+                    </div>
+
+                    <div class="ai-core">
+
+                        <div class="core-ring ring-1"></div>
+                        <div class="core-ring ring-2"></div>
+                        <div class="core-ring ring-3"></div>
+
+                        <div class="core-center">
+
+                            AI
+
+                        </div>
+
+                    </div>
+
+                    <div class="system-footer">
+
+                        <div>
+
+                            <small>
+
+                                DATE
+
+                            </small>
+
+                            <strong id="todayDate">
+
+                                05 Aug 2026
+
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <small>
+
+                                TIME
+
+                            </small>
+
+                            <strong id="liveClock">
+
+                                10:45 AM
+
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==================================
+                QUICK STATS
+        ===================================-->
+
+        <div class="hero-stats reveal">
+
+            <div class="hero-stat">
+
+                <div class="hero-stat__icon">
+
+                    📋
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        08
+
+                    </h3>
+
+                    <span>
+
+                        Today's Tasks
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <div class="hero-stat__icon">
+
+                    🚀
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        03
+
+                    </h3>
+
+                    <span>
+
+                        Active Projects
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <div class="hero-stat__icon">
+
+                    🤖
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        98%
+
+                    </h3>
+
+                    <span>
+
+                        Robot Health
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <div class="hero-stat__icon">
+
+                    🌐
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Online
+
+                    </h3>
+
+                    <span>
+
+                        Fleet Status
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--==================================
+                LIVE STATUS BAR
+        ===================================-->
+
+        <div class="hero-status reveal">
+
+            <span>
+
+                <i class="status-live"></i>
+
+                AI Core Active
+
+            </span>
+
+            <span>
+
+                <i class="status-live"></i>
+
+                Fleet Connected
+
+            </span>
+
+            <span>
+
+                <i class="status-live"></i>
+
+                Sensors Operational
+
+            </span>
+
+            <span>
+
+                <i class="status-live"></i>
+
+                Last Sync • 12 sec ago
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+            <div class="page-head">
+              <h1>Mission Control</h1>
+              <p>
+                Live health of every deployed rig, pipeline and edge node under
+                your ownership.
+              </p>
+            </div>
+            <div class="grid g-4">
+              <div class="card stat">
+                <div class="label">Active Rigs</div>
+                <div class="value">38</div>
+                <div class="delta">▲ 4 since last shift</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Uptime (30d)</div>
+                <div class="value">99.94%</div>
+                <div class="delta">▲ 0.06%</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Open Incidents</div>
+                <div class="value">3</div>
+                <div class="delta">▼ 2 resolved today</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Deploy Queue</div>
+                <div class="value">7</div>
+                <div class="delta down">▲ 3 waiting</div>
+              </div>
+            </div>
+            <div class="grid g-2 mt">
+              <div class="card">
+                <h4>Throughput — last 8 hours</h4>
+                <div class="chart">
+                  <div class="col">
+                    <i style="height: 44.21052631578947%"></i><span>00h</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 61.05263157894737%"></i><span>01h</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 53.68421052631579%"></i><span>02h</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 77.89473684210526%"></i><span>03h</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 69.47368421052632%"></i><span>04h</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 92.63157894736842%"></i><span>05h</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 83.15789473684211%"></i><span>06h</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 100%"></i><span>07h</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Resource Saturation</h4>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>Compute cluster A</span
+                    ><span class="sub">78% / 64 cores</span>
+                  </div>
+                  <div class="bar"><i style="width: 78%"></i></div>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>Compute cluster B</span
+                    ><span class="sub">46% / 32 cores</span>
+                  </div>
+                  <div class="bar"><i style="width: 46%"></i></div>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>Storage array</span
+                    ><span class="sub">91% / 240 TB</span>
+                  </div>
+                  <div class="bar alt"><i style="width: 91%"></i></div>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>Network egress</span
+                    ><span class="sub">34% / 40 Gbps</span>
+                  </div>
+                  <div class="bar"><i style="width: 34%"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="card mt">
+              <h4>Live Incident Feed</h4>
+              <div class="row">
+                <div>
+                  <b>Node ED-17 packet loss</b>
+                  <div class="sub">Edge · Bengaluru · 6 min ago</div>
+                </div>
+                <span class="tag err">critical</span>
+              </div>
+              <div class="row">
+                <div>
+                  <b>Thermal drift on rack B4</b>
+                  <div class="sub">Datacenter · 24 min ago</div>
+                </div>
+                <span class="tag warn">warning</span>
+              </div>
+              <div class="row">
+                <div>
+                  <b>Pipeline etl-nightly retried</b>
+                  <div class="sub">Automation · 1 hr ago</div>
+                </div>
+                <span class="tag info">auto-healed</span>
+              </div>
+              <div class="row">
+                <div>
+                  <b>Firmware v4.2.1 rollout done</b>
+                  <div class="sub">Fleet · 3 hrs ago</div>
+                </div>
+                <span class="tag ok">resolved</span>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="module fade-in"
+            id="mod-assets"
+            data-title="Asset Registry"
+            hidden
+          >
+            <div class="page-head">
+              <h1>Asset Registry</h1>
+              <p>
+                Every rig, sensor array and controller you are accountable for,
+                with lifecycle state.
+              </p>
+            </div>
+            <div class="toolbar">
+              <button class="btn">+ Register asset</button
+              ><button class="btn ghost">Export CSV</button
+              ><button class="btn ghost">Filter: all</button>
+            </div>
+            <div class="card">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Asset ID</th>
+                      <th>Type</th>
+                      <th>Location</th>
+                      <th>Firmware</th>
+                      <th>Health</th>
+                      <th>State</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>RIG-0142</td>
+                      <td>Compute rig</td>
+                      <td>Bengaluru DC1</td>
+                      <td>v4.2.1</td>
+                      <td>98%</td>
+                      <td><span class="tag ok">online</span></td>
+                    </tr>
+                    <tr>
+                      <td>SEN-2210</td>
+                      <td>Sensor array</td>
+                      <td>Field site 7</td>
+                      <td>v2.9.0</td>
+                      <td>76%</td>
+                      <td><span class="tag warn">degraded</span></td>
+                    </tr>
+                    <tr>
+                      <td>CTRL-0031</td>
+                      <td>PLC controller</td>
+                      <td>Plant floor A</td>
+                      <td>v1.4.8</td>
+                      <td>99%</td>
+                      <td><span class="tag ok">online</span></td>
+                    </tr>
+                    <tr>
+                      <td>ED-17</td>
+                      <td>Edge node</td>
+                      <td>Bengaluru North</td>
+                      <td>v4.1.9</td>
+                      <td>41%</td>
+                      <td><span class="tag err">fault</span></td>
+                    </tr>
+                    <tr>
+                      <td>RIG-0155</td>
+                      <td>Compute rig</td>
+                      <td>Pune DC2</td>
+                      <td>v4.2.1</td>
+                      <td>95%</td>
+                      <td><span class="tag ok">online</span></td>
+                    </tr>
+                    <tr>
+                      <td>SEN-2244</td>
+                      <td>Sensor array</td>
+                      <td>Field site 3</td>
+                      <td>v2.9.0</td>
+                      <td>88%</td>
+                      <td><span class="tag info">calibrating</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="grid g-3 mt">
+              <div class="card">
+                <h4>Lifecycle</h4>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>In service</span><span class="sub">31 assets</span>
+                  </div>
+                  <div class="bar"><i style="width: 82%"></i></div>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>Maintenance</span><span class="sub">5 assets</span>
+                  </div>
+                  <div class="bar alt"><i style="width: 13%"></i></div>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>Retiring</span><span class="sub">2 assets</span>
+                  </div>
+                  <div class="bar alt"><i style="width: 5%"></i></div>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Firmware spread</h4>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>v4.2.1</span><span class="sub">26 rigs</span>
+                  </div>
+                  <div class="bar"><i style="width: 68%"></i></div>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>v4.1.9</span><span class="sub">9 rigs</span>
+                  </div>
+                  <div class="bar"><i style="width: 24%"></i></div>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <div class="row" style="border: none; padding: 0 0 8px">
+                    <span>legacy</span><span class="sub">3 rigs</span>
+                  </div>
+                  <div class="bar alt"><i style="width: 8%"></i></div>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Warranty window</h4>
+                <div class="row">
+                  <span>Expiring &lt; 30 days</span
+                  ><span class="tag warn">4</span>
+                </div>
+                <div class="row">
+                  <span>Expiring &lt; 90 days</span
+                  ><span class="tag info">9</span>
+                </div>
+                <div class="row">
+                  <span>Covered</span><span class="tag ok">25</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="module fade-in"
+            id="mod-pipelines"
+            data-title="Build Pipelines"
+            hidden
+          >
+            <div class="page-head">
+              <h1>Build Pipelines</h1>
+              <p>
+                CI/CD lanes, firmware bakes and deployment gates across the
+                fleet.
+              </p>
+            </div>
+            <div class="grid g-4">
+              <div class="card stat">
+                <div class="label">Runs today</div>
+                <div class="value">124</div>
+                <div class="delta">▲ 18%</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Success rate</div>
+                <div class="value">96.2%</div>
+                <div class="delta">▲ 1.4%</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Median duration</div>
+                <div class="value">4m 12s</div>
+                <div class="delta">▼ 38s faster</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Blocked gates</div>
+                <div class="value">2</div>
+                <div class="delta down">▲ 1 needs approval</div>
+              </div>
+            </div>
+            <div class="card mt">
+              <h4>Active runs</h4>
+              <div style="margin-bottom: 16px">
+                <div class="row" style="border: none; padding: 0 0 8px">
+                  <span>firmware-bake · v4.2.2-rc1</span
+                  ><span class="sub">step 7/10 — signing</span>
+                </div>
+                <div class="bar"><i style="width: 72%"></i></div>
+              </div>
+              <div style="margin-bottom: 16px">
+                <div class="row" style="border: none; padding: 0 0 8px">
+                  <span>edge-agent · deploy fleet-north</span
+                  ><span class="sub">step 3/8 — canary</span>
+                </div>
+                <div class="bar alt"><i style="width: 45%"></i></div>
+              </div>
+              <div style="margin-bottom: 16px">
+                <div class="row" style="border: none; padding: 0 0 8px">
+                  <span>etl-nightly · aggregation</span
+                  ><span class="sub">step 9/10 — verify</span>
+                </div>
+                <div class="bar"><i style="width: 93%"></i></div>
+              </div>
+              <div style="margin-bottom: 16px">
+                <div class="row" style="border: none; padding: 0 0 8px">
+                  <span>telemetry-api · integration tests</span
+                  ><span class="sub">step 2/9 — provisioning</span>
+                </div>
+                <div class="bar"><i style="width: 21%"></i></div>
+              </div>
+            </div>
+            <div class="card mt">
+              <h4>Run log — firmware-bake</h4>
+              <div class="terminal">
+                <div class="mut">
+                  $ pipeline run firmware-bake --tag v4.2.2-rc1
+                </div>
+                <div class="ok">✔ checkout 1.2s</div>
+                <div class="ok">✔ toolchain cache 0.4s</div>
+                <div class="ok">✔ compile targets 2m 41s</div>
+                <div class="warn">
+                  ⚠ lint: 3 style warnings in drivers/i2c.c
+                </div>
+                <div class="ok">✔ unit tests 482/482</div>
+                <div>› signing artifact with HSM key eng-prod…</div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="module fade-in"
+            id="mod-telemetry"
+            data-title="Telemetry"
+            hidden
+          >
+            <div class="page-head">
+              <h1>Telemetry</h1>
+              <p>
+                Streaming signal from the fleet — thermals, vibration, power and
+                packet integrity.
+              </p>
+            </div>
+            <div class="grid g-2">
+              <div class="card">
+                <h4>Core temperature (°C)</h4>
+                <div class="chart">
+                  <div class="col">
+                    <i style="height: 69.31818181818183%"></i><span>A1</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 72.72727272727273%"></i><span>A2</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 65.9090909090909%"></i><span>A3</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 81.81818181818183%"></i><span>B1</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 100%"></i><span>B4</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 62.5%"></i><span>C1</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 70.45454545454545%"></i><span>C2</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Packet integrity</h4>
+                <div class="chart">
+                  <div class="col">
+                    <i style="height: 100%"></i><span>Mon</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 98.98989898989899%"></i><span>Tue</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 100%"></i><span>Wed</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 94.94949494949495%"></i><span>Thu</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 87.87878787878788%"></i><span>Fri</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 96.96969696969697%"></i><span>Sat</span>
+                  </div>
+                  <div class="col">
+                    <i style="height: 100%"></i><span>Sun</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid g-3 mt">
+              <div class="card" style="text-align: center">
+                <h4>Power draw</h4>
+                <div
+                  class="ring"
+                  style="
+                    background: conic-gradient(
+                      var(--primary) 266.40000000000003deg,
+                      rgba(120, 170, 255, 0.12) 0deg
+                    );
+                  "
+                >
+                  <div>74%</div>
+                </div>
+                <div class="sub" style="color: var(--muted); font-size: 12px">
+                  18.4 kW of 25 kW budget
+                </div>
+              </div>
+              <div class="card" style="text-align: center">
+                <h4>Vibration index</h4>
+                <div
+                  class="ring"
+                  style="
+                    background: conic-gradient(
+                      var(--success) 136.8deg,
+                      rgba(120, 170, 255, 0.12) 0deg
+                    );
+                  "
+                >
+                  <div>38%</div>
+                </div>
+                <div class="sub" style="color: var(--muted); font-size: 12px">
+                  within tolerance
+                </div>
+              </div>
+              <div class="card" style="text-align: center">
+                <h4>Disk wear</h4>
+                <div
+                  class="ring"
+                  style="
+                    background: conic-gradient(
+                      var(--accent) 327.6deg,
+                      rgba(120, 170, 255, 0.12) 0deg
+                    );
+                  "
+                >
+                  <div>91%</div>
+                </div>
+                <div class="sub" style="color: var(--muted); font-size: 12px">
+                  array R2 needs swap
+                </div>
+              </div>
+            </div>
+            <div class="card mt">
+              <h4>Threshold breaches (24h)</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Asset</th>
+                      <th>Signal</th>
+                      <th>Peak</th>
+                      <th>Threshold</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>06:12</td>
+                      <td>Rack B4</td>
+                      <td>temp_core</td>
+                      <td>88 °C</td>
+                      <td>80 °C</td>
+                      <td><span class="tag warn">fan boost</span></td>
+                    </tr>
+                    <tr>
+                      <td>04:48</td>
+                      <td>ED-17</td>
+                      <td>packet_loss</td>
+                      <td>12.4%</td>
+                      <td>2%</td>
+                      <td><span class="tag err">paged</span></td>
+                    </tr>
+                    <tr>
+                      <td>02:31</td>
+                      <td>RIG-0155</td>
+                      <td>power_w</td>
+                      <td>3.1 kW</td>
+                      <td>3.0 kW</td>
+                      <td><span class="tag info">logged</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="module fade-in"
+            id="mod-tickets"
+            data-title="Work Orders"
+            hidden
+          >
+            <div class="page-head">
+              <h1>Work Orders</h1>
+              <p>
+                Field tasks, maintenance windows and escalations assigned to
+                your cell.
+              </p>
+            </div>
+            <div class="grid g-4">
+              <div class="card stat">
+                <div class="label">Assigned</div>
+                <div class="value">9</div>
+                <div class="delta">3 due today</div>
+              </div>
+              <div class="card stat">
+                <div class="label">In progress</div>
+                <div class="value">4</div>
+                <div class="delta">avg age 1.6d</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Blocked</div>
+                <div class="value">1</div>
+                <div class="delta down">awaiting parts</div>
+              </div>
+              <div class="card stat">
+                <div class="label">Closed this week</div>
+                <div class="value">22</div>
+                <div class="delta">▲ 6 vs last week</div>
+              </div>
+            </div>
+            <div class="card mt">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Ref</th>
+                      <th>Title</th>
+                      <th>Asset</th>
+                      <th>Priority</th>
+                      <th>Due</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>WO-8841</td>
+                      <td>Replace fan tray</td>
+                      <td>Rack B4</td>
+                      <td><span class="tag err">P1</span></td>
+                      <td>Today 18:00</td>
+                      <td>In progress</td>
+                    </tr>
+                    <tr>
+                      <td>WO-8839</td>
+                      <td>Re-seat fiber uplink</td>
+                      <td>ED-17</td>
+                      <td><span class="tag err">P1</span></td>
+                      <td>Today 20:00</td>
+                      <td>Dispatched</td>
+                    </tr>
+                    <tr>
+                      <td>WO-8830</td>
+                      <td>Quarterly calibration</td>
+                      <td>SEN-2210</td>
+                      <td><span class="tag warn">P2</span></td>
+                      <td>Fri</td>
+                      <td>Scheduled</td>
+                    </tr>
+                    <tr>
+                      <td>WO-8824</td>
+                      <td>Disk swap array R2</td>
+                      <td>RIG-0142</td>
+                      <td><span class="tag warn">P2</span></td>
+                      <td>Sat</td>
+                      <td><span class="tag warn">blocked</span></td>
+                    </tr>
+                    <tr>
+                      <td>WO-8811</td>
+                      <td>Cable audit floor A</td>
+                      <td>Plant A</td>
+                      <td><span class="tag info">P3</span></td>
+                      <td>Next week</td>
+                      <td>Queued</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card mt">
+              <h4>Maintenance window</h4>
+              <div class="row">
+                <div>
+                  <b>Sat 02:00 – 05:00 IST</b>
+                  <div class="sub">Storage array firmware + disk swap</div>
+                </div>
+                <span class="tag info">approved</span>
+              </div>
+              <div class="row">
+                <div>
+                  <b>Sun 01:00 – 02:30 IST</b>
+                  <div class="sub">Edge fleet agent rollout, north region</div>
+                </div>
+                <span class="tag warn">pending sign-off</span>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="module fade-in"
+            id="mod-docs"
+            data-title="Runbooks"
+            hidden
+          >
+            <div class="page-head">
+              <h1>Runbooks</h1>
+              <p>
+                Step-by-step recovery procedures and engineering standards for
+                this cell.
+              </p>
+            </div>
+            <div class="grid g-2">
+              <div class="card">
+                <h4>Most used</h4>
+                <div class="list-note">
+                  <b>RB-01 · Edge node total loss</b>
+                  <p>
+                    Isolate the node, drain traffic to the nearest peer, verify
+                    uplink optics, then re-image from the golden bundle.
+                  </p>
+                </div>
+                <div class="list-note">
+                  <b>RB-04 · Thermal runaway on rack</b>
+                  <p>
+                    Force fan curve to max, shed non-critical workloads, and
+                    gate deploys until core temps fall under 70 °C for 10
+                    minutes.
+                  </p>
+                </div>
+                <div class="list-note">
+                  <b>RB-09 · Failed firmware signature</b>
+                  <p>
+                    Never bypass the HSM gate. Re-bake from a clean checkout and
+                    open a P2 with the build attestation attached.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Standards library</h4>
+                <div class="row">
+                  <span>Cabling &amp; labelling spec</span
+                  ><span class="tag info">v3.1</span>
+                </div>
+                <div class="row">
+                  <span>Change management policy</span
+                  ><span class="tag info">v2.8</span>
+                </div>
+                <div class="row">
+                  <span>Incident severity matrix</span
+                  ><span class="tag info">v1.9</span>
+                </div>
+                <div class="row">
+                  <span>Field safety checklist</span
+                  ><span class="tag ok">current</span>
+                </div>
+                <div class="row">
+                  <span>On-call handover template</span
+                  ><span class="tag ok">current</span>
+                </div>
+              </div>
+            </div>
+            <div class="card mt">
+              <h4>Quick command reference</h4>
+              <div class="terminal">
+                <div>
+                  <span class="mut"># drain an edge node</span><br />fleetctl
+                  drain ED-17 --graceful --timeout 120s
+                </div>
+                <div>
+                  <span class="mut"># pull last 200 telemetry frames</span
+                  ><br />telemetry tail --asset RIG-0142 -n 200
+                </div>
+                <div>
+                  <span class="mut"># roll firmware back one version</span
+                  ><br />fleetctl rollback --tag v4.1.9 --scope fleet-north
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="module fade-in"
+            id="mod-settings"
+            data-title="Preferences"
+            hidden
+          >
+            <div class="page-head">
+              <h1>Preferences</h1>
+              <p>
+                Alerting, on-call routing and workspace behaviour for your
+                account.
+              </p>
+            </div>
+            <div class="grid g-2">
+              <div class="card">
+                <h4>Alert routing</h4>
+                <div class="row">
+                  <div>
+                    <b>P1 pages</b>
+                    <div class="sub">Phone + push, no quiet hours</div>
+                  </div>
+                  <span class="tag ok">on</span>
+                </div>
+                <div class="row">
+                  <div>
+                    <b>P2 alerts</b>
+                    <div class="sub">Push only, 07:00–23:00</div>
+                  </div>
+                  <span class="tag ok">on</span>
+                </div>
+                <div class="row">
+                  <div>
+                    <b>Digest email</b>
+                    <div class="sub">Daily at 08:00 IST</div>
+                  </div>
+                  <span class="tag ok">on</span>
+                </div>
+                <div class="row">
+                  <div>
+                    <b>Deploy notifications</b>
+                    <div class="sub">Only failures</div>
+                  </div>
+                  <span class="tag warn">partial</span>
+                </div>
+              </div>
+              <div class="card">
+                <h4>Session &amp; access</h4>
+                <div class="row">
+                  <span>Role</span><span class="tag info">engineer</span>
+                </div>
+                <div class="row">
+                  <span>Scopes</span
+                  ><span class="sub"
+                    >fleet:write · pipeline:run · telemetry:read</span
+                  >
+                </div>
+                <div class="row">
+                  <span>MFA</span><span class="tag ok">hardware key</span>
+                </div>
+                <div class="row">
+                  <span>Last sign-in</span
+                  ><span class="sub">Today 06:41 IST · Bengaluru</span>
+                </div>
+                <div class="toolbar" style="margin: 16px 0 0">
+                  <button class="btn ghost">Rotate API token</button
+                  ><button class="btn ghost">View audit log</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

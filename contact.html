@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Stackly Robotics</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="index.html" class="nav__logo"
+        ><span class="dot"></span>StacklyStackly</a
+      >
+      <div class="nav__links">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="services.html">Services</a><a href="products.html">Products</a
+        ><a href="contact.html" class="active">Contact</a>
+      </div>
+      <button class="nav__cta" onclick="location.href = 'login.html'">
+        Login
+      </button>
+      <div class="nav__toggle"><span></span><span></span><span></span></div>
+    </nav>
+
+    <div class="overlay"></div>
+    <aside class="mobile-menu">
+      <button class="mobile-menu__close">&times;</button>
+      <nav class="mobile-menu__links">
+        <a href="index.html">Home</a><a href="about.html">About</a
+        ><a href="services.html">Services</a><a href="products.html">Products</a
+        ><a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="mobile-menu__spacer"></div>
+      <a href="login.html" class="mobile-menu__login">LOGIN / SIGN UP</a>
+    </aside>
+
+    <!-- 1. HERO -->
+    <section class="c-hero">
+      <div class="c-hero__bg"></div>
+      <div class="container c-hero__inner">
+        <span class="eyebrow">Get In Touch</span>
+        <h1 class="c-hero__title">
+          Let's Build the<br /><span class="text-grad">Future Together</span>
+        </h1>
+        <p class="c-hero__desc">
+          Whether you're scoping a deployment, exploring a partnership, or just
+          curious about our work — we'd love to hear from you.
+        </p>
+        <div class="c-hero__pills">
+          <span class="pill"><b>24h</b> response time</span>
+          <span class="pill"><b>4</b> global offices</span>
+          <span class="pill"><b>320+</b> team members</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTACT CARDS -->
+    <section class="contact-cards">
+      <div class="container">
+        <div class="grid-4 reveal">
+          <a href="mailto:hello@Stacklyrobotics.ai" class="ccard">
+            <div class="ccard__ic">✉</div>
+            <h3>Email Us</h3>
+            <p>hello@Stacklyrobotics.ai</p>
+            <span>General inquiries & partnerships</span>
+          </a>
+          <a href="tel:+14155550100" class="ccard">
+            <div class="ccard__ic">☎</div>
+            <h3>Call Us</h3>
+            <p>+1 (415) 555-0100</p>
+            <span>Mon–Fri, 9am–6pm PST</span>
+          </a>
+          <a href="#" class="ccard">
+            <div class="ccard__ic">⬤</div>
+            <h3>Live Chat</h3>
+            <p>Start a session</p>
+            <span>Avg wait: under 2 minutes</span>
+          </a>
+          <a href="#" class="ccard">
+            <div class="ccard__ic">⌖</div>
+            <h3>Visit Us</h3>
+            <p>San Francisco, CA</p>
+            <span>100 InStacklytion Way, 94107</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CONTACT FORM + INFO -->
+    <section class="form-section">
+      <div class="container form-grid">
+        <div class="reveal form-side">
+          <span class="eyebrow">Send a Message</span>
+          <h2 class="section-title">
+            Tell Us About<br />Your <span class="text-accent">Project</span>
+          </h2>
+          <p class="section-sub">
+            Fill out the form and our solutions team will get back to you within
+            one business day. All fields are required.
+          </p>
+
+          <form
+            class="cform"
+            id="contactForm"
+            onsubmit="
+              event.preventDefault();
+              handleSubmit();
+            "
+          >
+            <div class="cform__row">
+              <div class="field">
+                <label>First Name</label>
+                <input type="text" id="fname" placeholder="Aria" required />
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" id="lname" placeholder="Voss" required />
+              </div>
+            </div>
+            <div class="cform__row">
+              <div class="field">
+                <label>Email</label>
+                <input
+                  type="email"
+                  id="cemail"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label>Phone</label>
+                <input type="tel" id="cphone" placeholder="+1 (555) 000-0000" />
+              </div>
+            </div>
+            <div class="field">
+              <label>Company / Organization</label>
+              <input type="text" id="company" placeholder="Your company name" />
+            </div>
+            <div class="field">
+              <label>What can we help with?</label>
+              <div class="topic-grid">
+                <label class="topic"
+                  ><input
+                    type="radio"
+                    name="topic"
+                    value="deployment"
+                    checked
+                  /><span>Robot Deployment</span></label
+                >
+                <label class="topic"
+                  ><input type="radio" name="topic" value="partnership" /><span
+                    >Partnership</span
+                  ></label
+                >
+                <label class="topic"
+                  ><input type="radio" name="topic" value="research" /><span
+                    >Research Collab</span
+                  ></label
+                >
+                <label class="topic"
+                  ><input type="radio" name="topic" value="support" /><span
+                    >Technical Support</span
+                  ></label
+                >
+                <label class="topic"
+                  ><input type="radio" name="topic" value="careers" /><span
+                    >Careers</span
+                  ></label
+                >
+                <label class="topic"
+                  ><input type="radio" name="topic" value="other" /><span
+                    >Other</span
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="field">
+              <label>Message</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Tell us about your use case, timeline, and any specific requirements..."
+                required
+              ></textarea>
+            </div>
+            <label class="check-consent"
+              ><input type="checkbox" id="consent" required /><span
+                >I agree to be contacted about my inquiry and accept the privacy
+                policy.</span
+              ></label
+            >
+            <button
+              type="submit"
+              class="btn btn--primary cform__submit"
+              id="submitBtn"
+            >
+              Send Message →
+            </button>
+            <div class="cform__msg" id="formMsg"></div>
+          </form>
+        </div>
+
+        <div class="reveal info-side">
+          <div class="info-card">
+            <h3>Headquarters</h3>
+            <div class="info-row">
+              <span class="info-label">Address</span
+              ><span
+                >100 InStacklytion Way<br />San Francisco, CA 94107<br />United
+                States</span
+              >
+            </div>
+            <div class="info-row">
+              <span class="info-label">Email</span
+              ><span>hello@Stacklyrobotics.ai</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Phone</span
+              ><span>+1 (415) 555-0100</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Hours</span
+              ><span>Mon–Fri, 9am–6pm PST</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <h3>Regional Offices</h3>
+            <div class="office">
+              <div class="office-dot od1"></div>
+              <div><b>Munich, DE</b><span>Control Systems Lab</span></div>
+            </div>
+            <div class="office">
+              <div class="office-dot od2"></div>
+              <div><b>Tokyo, JP</b><span>Precision Actuation</span></div>
+            </div>
+            <div class="office">
+              <div class="office-dot od3"></div>
+              <div><b>Bangalore, IN</b><span>Software & AI Hub</span></div>
+            </div>
+          </div>
+          <div class="info-card info-card--social">
+            <h3>Follow Stackly</h3>
+            <p>Stay connected for the latest in robotics and AI.</p>
+            <div class="info-social">
+              <a href="#">𝕏</a><a href="#">in</a><a href="#">gh</a
+              ><a href="#">▶</a><a href="#">✦</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MAP / LOCATION -->
+    <section class="map-section">
+      <div class="container">
+        <div class="reveal" style="margin-bottom: 40px; text-align: center">
+          <span class="eyebrow">Find Us</span>
+          <h2 class="section-title">
+            Our <span class="text-grad">Locations</span>
+          </h2>
+        </div>
+        <div class="map-wrap reveal">
+          <div class="map-canvas">
+            <div class="map-grid-lines"></div>
+            <div class="map-loc" style="left: 20%; top: 42%">
+              <span class="map-pin-dot"></span>
+              <div class="map-loc-label">San Francisco</div>
+            </div>
+            <div class="map-loc" style="left: 48%; top: 34%">
+              <span class="map-pin-dot"></span>
+              <div class="map-loc-label">Munich</div>
+            </div>
+            <div class="map-loc" style="left: 80%; top: 44%">
+              <span class="map-pin-dot"></span>
+              <div class="map-loc-label">Tokyo</div>
+            </div>
+            <div class="map-loc" style="left: 68%; top: 64%">
+              <span class="map-pin-dot"></span>
+              <div class="map-loc-label">Bangalore</div>
+            </div>
+            <div class="map-connections"></div>
+          </div>
+          <div class="map-sidebar">
+            <h3>Global Presence</h3>
+            <p>
+              Four offices across three continents, working around the clock on
+              intelligent machines.
+            </p>
+            <div class="map-stat"><b>4</b><span>Offices</span></div>
+            <div class="map-stat"><b>42</b><span>Countries Served</span></div>
+            <div class="map-stat"><b>24/7</b><span>Support Coverage</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FAQ -->
+    <section class="c-faq">
+      <div class="container">
+        <div class="reveal" style="text-align: center; margin-bottom: 48px">
+          <span class="eyebrow">Quick Answers</span>
+          <h2 class="section-title">
+            Before You <span class="text-accent">Ask</span>
+          </h2>
+        </div>
+        <div class="c-faq__list reveal">
+          <div class="cfaq-item">
+            <button class="cfaq-q">
+              How quickly will I get a response?<span class="cfaq-icon">+</span>
+            </button>
+            <div class="cfaq-a">
+              <p>
+                We respond to all inquiries within one business day. For urgent
+                technical issues, use live chat for a sub-2-minute response.
+              </p>
+            </div>
+          </div>
+          <div class="cfaq-item">
+            <button class="cfaq-q">
+              Can I schedule a demo of your robots?<span class="cfaq-icon"
+                >+</span
+              >
+            </button>
+            <div class="cfaq-a">
+              <p>
+                Absolutely. Select "Robot Deployment" as your topic and mention
+                "demo" in the message — we'll arrange an on-site or virtual
+                session.
+              </p>
+            </div>
+          </div>
+          <div class="cfaq-item">
+            <button class="cfaq-q">
+              Do you offer pilot programs?<span class="cfaq-icon">+</span>
+            </button>
+            <div class="cfaq-a">
+              <p>
+                Yes, our Pilot plan runs 30 days with a single robot
+                integration. See the Services page for details or mention
+                "pilot" in your message.
+              </p>
+            </div>
+          </div>
+          <div class="cfaq-item">
+            <button class="cfaq-q">
+              How do I apply for a research collaboration?<span
+                class="cfaq-icon"
+                >+</span
+              >
+            </button>
+            <div class="cfaq-a">
+              <p>
+                Select "Research Collab" as your topic and include your
+                institution, research area, and a brief proposal. Our science
+                team reviews applications weekly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DEPARTMENTS -->
+    <section class="departments">
+      <div class="container">
+        <div class="reveal" style="margin-bottom: 46px">
+          <span class="eyebrow">Direct Lines</span>
+          <h2 class="section-title">
+            Reach the Right <span class="text-grad">Team</span>
+          </h2>
+        </div>
+        <div class="grid-3 reveal">
+          <div class="dept-card">
+            <div class="dept-bar dept-bar--1"></div>
+            <h3>Sales</h3>
+            <p>Product demos, pricing, and deployment planning.</p>
+            <a href="mailto:sales@Stacklyrobotics.ai">sales@Stacklyrobotics.ai</a>
+          </div>
+          <div class="dept-card">
+            <div class="dept-bar dept-bar--2"></div>
+            <h3>Support</h3>
+            <p>Technical assistance for existing deployments.</p>
+            <a href="mailto:support@Stacklyrobotics.ai">support@Stacklyrobotics.ai</a>
+          </div>
+          <div class="dept-card">
+            <div class="dept-bar dept-bar--3"></div>
+            <h3>Research</h3>
+            <p>Academic collaborations and paper inquiries.</p>
+            <a href="mailto:research@Stacklyrobotics.ai"
+              >research@Stacklyrobotics.ai</a
+            >
+          </div>
+          <div class="dept-card">
+            <div class="dept-bar dept-bar--4"></div>
+            <h3>Press</h3>
+            <p>Media inquiries and press kit requests.</p>
+            <a href="mailto:press@Stacklyrobotics.ai">press@Stacklyrobotics.ai</a>
+          </div>
+          <div class="dept-card">
+            <div class="dept-bar dept-bar--5"></div>
+            <h3>Careers</h3>
+            <p>Open roles and internship applications.</p>
+            <a href="mailto:careers@Stacklyrobotics.ai">careers@Stacklyrobotics.ai</a>
+          </div>
+          <div class="dept-card">
+            <div class="dept-bar dept-bar--6"></div>
+            <h3>Partnerships</h3>
+            <p>Strategic alliances and integrations.</p>
+            <a href="mailto:partners@Stacklyrobotics.ai"
+              >partners@Stacklyrobotics.ai</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CTA -->
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <h2 class="section-title">Prefer to Talk in Person?</h2>
+        <p class="section-sub">
+          Book a 30-minute call with our solutions team — no strings attached.
+        </p>
+        <div class="cta__btns">
+          <a href="tel:+14155550100" class="btn btn--primary">Call Now</a>
+          <a href="login.html" class="btn btn--ghost">Book Online</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <div class="footer__brand">
+              <span class="dot"></span>Stackly·ROBOTICS
+            </div>
+            <p>Engineering autonomous intelligence for the physical world.</p>
+            <div class="footer__social">
+              <a href="#">𝕏</a><a href="#">in</a><a href="#">gh</a
+              ><a href="#">▶</a>
+            </div>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="research.html">Research</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="research.html">Publications</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Press Kit</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          © 2026 Stackly Robotics. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/shared.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

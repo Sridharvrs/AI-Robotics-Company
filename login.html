@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Stackly Robotics</title>
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav__logo"><span class="dot"></span>StacklyStackly</a>
+  <div class="nav__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="contact.html">Contact</a>
+  </div>
+  <button class="nav__cta" onclick="location.href='login.html'">Login</button>
+  <div class="nav__toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="overlay"></div>
+<aside class="mobile-menu">
+  <button class="mobile-menu__close">&times;</button>
+  <nav class="mobile-menu__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-menu__spacer"></div>
+  <a href="login.html" class="mobile-menu__login">LOGIN / SIGN UP</a>
+</aside>
+
+<!-- LOGIN -->
+<section class="login">
+  <div class="login__bg"></div>
+  <div class="login__card reveal" id="loginCard">
+    <a href="index.html" class="login__close" aria-label="Close">&times;</a>
+    <div class="login__head">
+      <div class="login__logo"><span class="dot"></span>Stackly·ROBOTICS</div>
+      <h1 id="formTitle">Welcome Back</h1>
+      <p id="formSub">Sign in to your Stackly Robotics account</p>
+    </div>
+
+    <!-- Role selector -->
+    <div class="role-selector">
+      <label class="role-label">Select your role</label>
+      <div class="role-options">
+        <button type="button" class="role-opt active" data-role="engineer">
+          <span class="role-ic">⚙</span>
+          <span class="role-name">Engineer</span>
+        </button>
+        <button type="button" class="role-opt" data-role="researcher">
+          <span class="role-ic">⬡</span>
+          <span class="role-name">Researcher</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form class="login__form" id="loginForm" >
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+      </div>
+      <div class="field-row">
+        <label class="check"><input type="checkbox" id="remember"><span>Remember me</span></label>
+        <a href="#" class="link-forgot">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn btn--primary login__submit" id="submitBtn">Sign In</button>
+      <div class="login__msg" id="loginMsg"></div>
+    </form>
+
+    <!-- Toggle -->
+    <p class="login__toggle">Don't have an account? <a href="signup.html">Create one</a></p>
+
+    <!-- Divider -->
+    <div class="divider"><span>or continue with</span></div>
+    <div class="social-row">
+      <button class="social-btn">𝕏</button>
+      <button class="social-btn">G</button>
+      <button class="social-btn">in</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand"><span class="dot"></span>Stackly·ROBOTICS</div><p>Engineering autonomous intelligence for the physical world.</p><div class="footer__social"><a href="#">𝕏</a><a href="#">in</a><a href="#">gh</a><a href="#">▶</a></div></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a><a href="contact.html">Contact</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="research.html">Publications</a></li><li><a href="#">Documentation</a></li><li><a href="#">Press Kit</a></li><li><a href="#">Careers</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Security</a></li><li><a href="login.html">Login</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">© 2026 Stackly Robotics. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/shared.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
