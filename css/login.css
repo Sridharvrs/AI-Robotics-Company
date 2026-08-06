@@ -62,3 +62,10 @@
   .login__card { padding: 36px 24px; }
   .role-options { grid-template-columns: repeat(2,1fr); }
 }
+
+
+.login__toggle a{
+    color: rgb(0, 183, 255);
+    font-size: larger;
+    font-weight: bolder;
+}
