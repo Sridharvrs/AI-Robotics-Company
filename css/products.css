@@ -9,24 +9,196 @@
 .filter-btn.active, .filter-btn:hover { background: var(--grad-accent); color:#2a0a1a; border-color:transparent; }
 
 /* products */
-.products { background: var(--bg); }
-.prod-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
-.prod-card { background: var(--panel); border:1px solid var(--line); border-radius: var(--radius); overflow:hidden; transition:.3s; }
-.prod-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: var(--shadow); }
-.prod-card.hide { display:none; }
-.prod-visual { height: 200px; position:relative; display:flex;align-items:center;justify-content:center; }
-.prod-tag { position:absolute; top:14px; left:14px; padding: 4px 12px; background: rgba(0,0,0,0.4); border-radius: 20px; font-size: 11px; font-weight:700; letter-spacing:1px; text-transform:uppercase; backdrop-filter: blur(6px); }
-.pv1 { background: linear-gradient(135deg, #003a5c, #00e5ff); }
-.pv2 { background: linear-gradient(135deg, #003a2b, #2bd9a8); }
-.pv3 { background: linear-gradient(135deg, #2a0050, #6d7bff); }
-.pv4 { background: linear-gradient(135deg, #5c0033, #ff5e8a); }
-.pv5 { background: linear-gradient(135deg, #3a2c00, #ffd23f); }
-.pv6 { background: linear-gradient(135deg, #0a1a1f, #00a3ff); }
-.prod-body { padding: 24px; }
-.prod-body h3 { font-size: 20px; margin-bottom: 10px; }
-.prod-body p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
-.prod-specs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 18px; }
-.prod-specs span { padding: 5px 12px; background: var(--panel-2); border:1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--primary); font-family:'Orbitron'; }
+.products{
+    background:var(--bg);
+}
+
+.prod-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.prod-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    transition:.35s;
+}
+
+.prod-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--accent);
+    box-shadow:var(--shadow);
+}
+
+.prod-card.hide{
+    display:none;
+}
+
+.prod-visual{
+
+    height:220px;
+
+    position:relative;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+.prod-visual::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(6,8,15,.08),
+        rgba(6,8,15,.35)
+    );
+
+}
+
+.prod-tag{
+
+    position:absolute;
+
+    top:16px;
+
+    left:16px;
+
+    z-index:2;
+
+    padding:5px 14px;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(8px);
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+/* Industrial Robot Arm */
+
+.pv1{
+
+    background-image:url("../images/car-toy.webp");
+
+}
+
+/* Warehouse Mobile Robot */
+
+.pv2{
+
+    background-image:url("../images/warehouse.webp");
+
+}
+
+/* AI / Software */
+
+.pv3{
+
+    background-image:url("../images/features3.webp");
+
+}
+
+/* Collaborative Robot */
+
+.pv4{
+
+    background-image:url("../images/robot.webp");
+
+}
+
+/* Autonomous Drone */
+
+.pv5{
+
+    background-image:url("../images/drone.webp");
+
+}
+
+/* Cloud Dashboard */
+
+.pv6{
+
+    background-image:url("../images/analtics.webp");
+
+}
+
+.prod-body{
+
+    padding:24px;
+
+}
+
+.prod-body h3{
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+.prod-body p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-bottom:16px;
+
+}
+
+.prod-specs{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:18px;
+
+}
+
+.prod-specs span{
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    background:var(--panel-2);
+
+    border:1px solid var(--line);
+
+    color:var(--primary);
+
+    font-family:'Orbitron';
+
+    font-size:12px;
+
+}
 
 /* featured paper */
 .featured-paper { background: linear-gradient(180deg, #06080f, #0a0f2e); }

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Stackly Robotics</title>
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/research.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+      </a>
+  <div class="nav__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="research.html" class="active">Research</a><a href="contact.html">Contact</a>
+  </div>
+  <button class="nav__cta" onclick="location.href='login.html'">Login</button>
+  <div class="nav__toggle"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="overlay"></div>
+<aside class="mobile-menu">
+  <button class="mobile-menu__close">&times;</button>
+  <nav class="mobile-menu__links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="research.html" class="active">Research</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-menu__spacer"></div>
+  <a href="login.html" class="mobile-menu__login">LOGIN / SIGN UP</a>
+</aside>
+
+<!-- 1. HERO -->
+<section class="r-hero">
+  <div class="r-hero__noise"></div>
+  <div class="container r-hero__inner">
+    <span class="eyebrow">Research & InStacklytion</span>
+    <h1 class="r-hero__title">Pushing the <span class="text-grad">Frontier</span><br>of Embodied AI</h1>
+    <p class="r-hero__desc">Our research lab publishes openly on perception, manipulation, learning, and the science of intelligent machines in the physical world.</p>
+    <div class="r-hero__tags">
+      <span>60+ Papers</span><span>16 Patents</span><span>4 Open Datasets</span><span>12 Collaborations</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. RESEARCH AREAS -->
+<section class="areas">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:50px">
+      <span class="eyebrow">Focus Areas</span>
+      <h2 class="section-title">Six Frontiers We <span class="text-grad">Explore</span></h2>
+    </div>
+    <div class="areas__grid reveal">
+      <div class="area-card"><div class="area-bar"></div><h3>Perception</h3><p>Neural radiance fields, event cameras, and multi-modal sensor fusion for robust 3D understanding.</p></div>
+      <div class="area-card"><div class="area-bar"></div><h3>Manipulation</h3><p>Dexterous in-hand manipulation, deformable object handling, and contact-rich control.</p></div>
+      <div class="area-card"><div class="area-bar"></div><h3>Learning</h3><p>Reinforcement from demonstration, sim-to-real transfer, and foundation models for robotics.</p></div>
+      <div class="area-card"><div class="area-bar"></div><h3>Planning</h3><p>Long-horizon task planning, symbolic reasoning, and safe exploration under uncertainty.</p></div>
+      <div class="area-card"><div class="area-bar"></div><h3>Human-Robot</h3><p>Intent inference, shared autonomy, and natural language interaction with machines.</p></div>
+      <div class="area-card"><div class="area-bar"></div><h3>Swarm</h3><p>Decentralized coordination, emergent behavior, and scalable multi-robot systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. FEATURED PAPER -->
+<section class="featured-paper">
+  <div class="container fp__grid">
+    <div class="reveal fp__visual">
+      <div class="fp__chart">
+        <div class="bar" style="height:40%"></div>
+        <div class="bar" style="height:65%"></div>
+        <div class="bar" style="height:80%"></div>
+        <div class="bar" style="height:55%"></div>
+        <div class="bar" style="height:92%"></div>
+        <div class="bar" style="height:73%"></div>
+      </div>
+    </div>
+    <div class="reveal fp__text">
+      <span class="eyebrow">Featured Publication</span>
+      <h2 class="section-title">StacklyField: Real-Time<br>Neural Scene Representations<br>for <span class="text-accent">Robotic Manipulation</span></h2>
+      <p class="section-sub">We introduce a continuous neural field representation that enables robots to reconstruct and reason about novel scenes in under 50ms — a 24× speedup over prior methods.</p>
+      <div class="fp__meta">
+        <div><b>Conference</b><span>CoRL 2026</span></div>
+        <div><b>Citations</b><span>142</span></div>
+        <div><b>Code</b><span>Open Source</span></div>
+      </div>
+      <a href="error.html" class="btn btn--primary">Read Paper →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PUBLICATIONS LIST -->
+<section class="pubs">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:40px">
+      <span class="eyebrow">Publications</span>
+      <h2 class="section-title">Recent <span class="text-grad">Papers</span></h2>
+    </div>
+    <div class="pubs__list reveal">
+      <a href="error.html" class="pub-item"><div class="pub-year">2026</div><div class="pub-body"><h4>Dexterous In-Hand Manipulation via Tactile Foundation Models</h4><span>RSS 2026 · A. Voss, M. Tanaka et al.</span></div><div class="pub-arrow">→</div></a>
+      <a href="error.html" class="pub-item"><div class="pub-year">2026</div><div class="pub-body"><h4>Sim-to-Real Transfer with Causal World Models</h4><span>ICRA 2026 · K. Reyes, J. Pike et al.</span></div><div class="pub-arrow">→</div></a>
+      <a href="error.html" class="pub-item"><div class="pub-year">2025</div><div class="pub-body"><h4>SwarmCoord: Decentralized Multi-Robot Task Allocation</h4><span>NeurIPS 2025 · M. Tanaka et al.</span></div><div class="pub-arrow">→</div></a>
+      <a href="error.html" class="pub-item"><div class="pub-year">2025</div><div class="pub-body"><h4>SafeLang: Grounding Natural Language in Robot Action Spaces</h4><span>IROS 2025 · A. Voss et al.</span></div><div class="pub-arrow">→</div></a>
+      <a href="error.html" class="pub-item"><div class="pub-year">2025</div><div class="pub-body"><h4>Event-Based Depth Estimation for High-Speed Robotics</h4><span>CVPR 2025 · K. Reyes et al.</span></div><div class="pub-arrow">→</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. OPEN DATASETS -->
+<section class="datasets">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:46px">
+      <span class="eyebrow">Open Science</span>
+      <h2 class="section-title">Datasets We <span class="text-accent">Release</span></h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="ds-card"><div class="ds-ic">▦</div><h3>StacklyGrasp-50K</h3><p>50,000 annotated grasp attempts across 1,200 objects with force and tactile data.</p><div class="ds-stats"><span>50K samples</span><span>1.2 TB</span></div><a href="error.html" class="btn btn--ghost">Download</a></div>
+      <div class="ds-card"><div class="ds-ic">◈</div><h3>StacklyScene-300</h3><p>300 indoor scenes with multi-view RGB-D, robot trajectories, and scene graphs.</p><div class="ds-stats"><span>300 scenes</span><span>4.5 TB</span></div><a href="error.html" class="btn btn--ghost">Download</a></div>
+      <div class="ds-card"><div class="ds-ic">⬡</div><h3>StacklySwarm-Log</h3><p>Multi-robot coordination logs from 10,000 hours of fleet operations.</p><div class="ds-stats"><span>10K hours</span><span>800 GB</span></div><a href="error.html" class="btn btn--ghost">Download</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. COLLABORATIONS -->
+<section class="collab">
+  <div class="container">
+    <div class="grid-2">
+      <div class="reveal">
+        <span class="eyebrow">Partnerships</span>
+        <h2 class="section-title">Research <span class="text-grad">Collaborations</span></h2>
+        <p class="section-sub">We partner with leading universities and institutions to advance the field. We share data, co-author papers, and host visiting researchers.</p>
+        <a href="login.html" class="btn btn--primary">Partner With Us</a>
+      </div>
+      <div class="reveal collab__logos">
+        <div class="collab-logo">MIT</div><div class="collab-logo">Stanford</div><div class="collab-logo">ETH Zürich</div><div class="collab-logo">Tokyo</div><div class="collab-logo">CMU</div><div class="collab-logo">KAIST</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. NEWSLETTER CTA -->
+<section class="cta">
+  <div class="container cta__inner reveal">
+    <h2 class="section-title">Stay at the <span class="text-grad">Frontier</span></h2>
+    <p class="section-sub">Subscribe to our research newsletter for paper releases, datasets, and open positions.</p>
+    <form class="newsletter" onsubmit="event.preventDefault();this.querySelector('.ns-confirm').style.display='block';">
+      <input type="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn btn--accent">Subscribe</button>
+      <div class="ns-confirm">Thanks! You're on the list.</div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+    </div><p>Engineering autonomous intelligence for the physical world.</p><div class="footer__social">
+        <a href="error.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="error.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="error.html"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="error.html"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li></ul></div>
+
+      <div><h4>Legal</h4><ul><li><a href="error.html">Privacy</a></li><li><a href="error.html">Terms</a></li><li><a href="error.html">Security</a></li><li><a href="login.html">Login</a></li></ul></div>
+      
+      <div>
+
+    <h4>Newsletter</h4>
+
+    <p class="footer-news-text">
+        Stay updated with the latest robotics innovations,
+        product launches and research insights.
+    </p>
+
+    <form class="footer-newsletter">
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+
+            Subscribe
+
+        </button>
+
+    </form>
+
+</div>
+      
+    </div>
+    <div class="footer__bottom">© 2026 Stackly Robotics. All rights reserved.</div>
+  </div>
+</footer>
+<script src="js/shared.js"></script>
+<script src="js/research.js"></script>
+</body>
+</html>

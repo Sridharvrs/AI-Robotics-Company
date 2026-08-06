@@ -11,13 +11,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   </head>
   <body>
     <nav class="nav">
-      <a href="index.html" class="nav__logo"
-        ><span class="dot"></span>StacklyStackly</a
-      >
+      <a href="index.html" class="nav__logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+      </a>
       <div class="nav__links">
-        <a href="index.html">Home</a><a href="about.html">About</a
-        ><a href="services.html">Services</a><a href="products.html">Products</a
-        ><a href="contact.html" class="active">Contact</a>
+        <a href="index.html">Home</a><a href="about.html">About</a>             
+        <a href="services.html">Services</a><a href="products.html">Products</a>
+        <a href="contact.html" class="active">Contact</a>
       </div>
       <button class="nav__cta" onclick="location.href = 'login.html'">
         Login
@@ -73,13 +73,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <p>+1 (415) 555-0100</p>
             <span>Mon–Fri, 9am–6pm PST</span>
           </a>
-          <a href="#" class="ccard">
+          <a href="error.html" class="ccard">
             <div class="ccard__ic">⬤</div>
             <h3>Live Chat</h3>
             <p>Start a session</p>
             <span>Avg wait: under 2 minutes</span>
           </a>
-          <a href="#" class="ccard">
+          <a href="error.html" class="ccard">
             <div class="ccard__ic">⌖</div>
             <h3>Visit Us</h3>
             <p>San Francisco, CA</p>
@@ -113,11 +113,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <div class="cform__row">
               <div class="field">
                 <label>First Name</label>
-                <input type="text" id="fname" placeholder="Aria" required />
+                <input type="text" id="fname" placeholder="Aria" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" required />
               </div>
               <div class="field">
                 <label>Last Name</label>
-                <input type="text" id="lname" placeholder="Voss" required />
+                <input type="text" id="lname" placeholder="Voss" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" required />
               </div>
             </div>
             <div class="cform__row">
@@ -132,7 +132,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
               </div>
               <div class="field">
                 <label>Phone</label>
-                <input type="tel" id="cphone" placeholder="+1 (555) 000-0000" />
+                <input type="tel" id="cphone" placeholder="+91 8854241853" oninput="this.value=this.value.replace(/[^0-9]/g,'')" />
               </div>
             </div>
             <div class="field">
@@ -245,8 +245,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <h3>Follow Stackly</h3>
             <p>Stay connected for the latest in robotics and AI.</p>
             <div class="info-social">
-              <a href="#">𝕏</a><a href="#">in</a><a href="#">gh</a
-              ><a href="#">▶</a><a href="#">✦</a>
+              <a href="error.html">𝕏</a><a href="error.html">in</a><a href="error.html">gh</a
+              ><a href="error.html">▶</a><a href="error.html">✦</a>
             </div>
           </div>
         </div>
@@ -431,53 +431,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__grid">
-          <div>
-            <div class="footer__brand">
-              <span class="dot"></span>Stackly·ROBOTICS
-            </div>
-            <p>Engineering autonomous intelligence for the physical world.</p>
-            <div class="footer__social">
-              <a href="#">𝕏</a><a href="#">in</a><a href="#">gh</a
-              ><a href="#">▶</a>
-            </div>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="research.html">Research</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="research.html">Publications</a></li>
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Press Kit</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Security</a></li>
-              <li><a href="login.html">Login</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          © 2026 Stackly Robotics. All rights reserved.
-        </div>
-      </div>
-    </footer>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div><div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+            <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+    </div><p>Engineering autonomous intelligence for the physical world.</p><div class="footer__social">
+        <a href="error.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="error.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="error.html"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="error.html"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li></ul></div>
+
+      <div><h4>Legal</h4><ul><li><a href="error.html">Privacy</a></li><li><a href="error.html">Terms</a></li><li><a href="error.html">Security</a></li><li><a href="login.html">Login</a></li></ul></div>
+    </div>
+    
+      <div>
+
+    <h4>Newsletter</h4>
+
+    <p class="footer-news-text">
+        Stay updated with the latest robotics innovations,
+        product launches and research insights.
+    </p>
+
+    <form class="footer-newsletter">
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+
+            Subscribe
+
+        </button>
+
+    </form>
+
+</div>
+      
+    <div class="footer__bottom">© 2026 Stackly Robotics. All rights reserved.</div>
+  </div>
+</footer>
 
     <script src="js/shared.js"></script>
     <script src="js/contact.js"></script>

@@ -60,13 +60,78 @@
 .tab-panel { display:none; grid-template-columns: 1fr 1fr; gap: 40px; align-items:center; background: var(--panel); border:1px solid var(--line); border-radius: var(--radius); padding: 36px; }
 .tab-panel.active { display:grid; animation: fadeIn .4s; }
 @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
-.tp__img { height: 260px; border-radius: 14px; }
-.tp__img--0 { background: linear-gradient(135deg, #003a5c, #00e5ff); }
-.tp__img--1 { background: linear-gradient(135deg, #5c0033, #ff5e8a); }
-.tp__img--2 { background: linear-gradient(135deg, #003a2b, #2bd9a8); }
-.tp__img--3 { background: linear-gradient(135deg, #3a2c00, #ffd23f); }
+.tp__img{
+
+    height:260px;
+
+    border-radius:14px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+/* Manufacturing */
+
+.tp__img--0{
+
+    background-image:url("https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1200&q=80");
+
+}
+
+/* Medical Robot */
+
+.tp__img--1{
+
+    background-image:url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80");
+
+}
+
+/* Warehouse Logistics */
+
+.tp__img--2{
+
+    background-image:url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80");
+
+}
+
+/* Space Robotics */
+
+.tp__img--3{
+
+    background-image:url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80");
+
+}
 .tp__body h3 { font-size: 26px; margin-bottom: 14px; }
 .tp__body p { color: var(--muted); margin-bottom: 22px; }
+
+.tp__img{
+
+    position:relative;
+
+}
+
+.tp__img::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(6,8,15,.15),
+        rgba(6,8,15,.35)
+    );
+
+    border-radius:14px;
+
+}
 
 /* metrics */
 .metrics { background: var(--bg); padding: 70px 0; }
@@ -2178,3 +2243,4 @@ font-size:12px;
 }
 
 }
+

@@ -1,0 +1,121 @@
+.error-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(180deg,#06080f,#0b1020);
+
+}
+
+.error-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(0,229,255,.05) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(0,229,255,.05) 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    mask-image:
+    radial-gradient(circle,#000 45%,transparent 100%);
+
+}
+
+.error-box{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    max-width:650px;
+
+}
+
+.error-code{
+
+    font-family:'Orbitron';
+
+    font-size:160px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    background:var(--grad);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.error-box h1{
+
+    margin:20px 0;
+
+    font-size:42px;
+
+}
+
+.error-box p{
+
+    color:var(--muted);
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.error-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+@media(max-width:768px){
+
+.error-code{
+
+font-size:110px;
+
+}
+
+.error-box h1{
+
+font-size:32px;
+
+}
+
+.error-box p{
+
+font-size:16px;
+
+}
+
+}
