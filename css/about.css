@@ -2385,3 +2385,171 @@
     line-height: 1.7;
   }
 }
+
+
+/*======================================
+        LARGE TABLET (992px)
+======================================*/
+
+@media (max-width:992px){
+
+    .inside-Stackly{
+        padding:90px 0;
+    }
+
+    .inside-gallery{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:24px;
+    }
+
+    .inside-card{
+        height:280px;
+    }
+
+    .inside-card--featured{
+        grid-column:span 2;
+        height:420px;
+    }
+
+    .inside-Stackly__head{
+        margin-bottom:60px;
+    }
+
+    .inside-Stackly__footer{
+        margin-top:50px;
+    }
+
+}
+
+
+/*======================================
+            TABLET (768px)
+======================================*/
+
+@media (max-width:768px){
+
+    .inside-Stackly{
+        padding:80px 0;
+    }
+
+    .inside-gallery{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .inside-card,
+    .inside-card--featured{
+        grid-column:auto;
+        height:300px;
+    }
+
+    .inside-Stackly__head{
+        text-align:center;
+        margin-bottom:45px;
+    }
+
+    .inside-Stackly__head .section-title{
+        font-size:38px;
+        line-height:1.2;
+    }
+
+    .inside-Stackly__head .section-sub{
+        max-width:100%;
+        margin:18px auto 0;
+    }
+
+    .inside-card__overlay{
+        padding:24px;
+    }
+
+    .inside-card__overlay h3{
+        font-size:24px;
+    }
+
+    .inside-card__overlay span{
+        font-size:14px;
+    }
+
+    .inside-Stackly__footer{
+        margin-top:40px;
+        text-align:center;
+    }
+
+}
+
+
+/*======================================
+            MOBILE (576px)
+======================================*/
+
+@media (max-width:576px){
+
+    .inside-Stackly{
+        padding:70px 0;
+    }
+
+    .inside-gallery{
+        gap:18px;
+    }
+
+    .inside-card,
+    .inside-card--featured{
+        height:240px;
+        border-radius:18px;
+    }
+
+    .inside-Stackly__head .section-title{
+        font-size:30px;
+    }
+
+    .inside-Stackly__head .section-sub{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .inside-card__overlay{
+        padding:18px;
+    }
+
+    .inside-card__overlay h3{
+        font-size:20px;
+        margin-bottom:6px;
+    }
+
+    .inside-card__overlay span{
+        font-size:13px;
+    }
+
+    .inside-Stackly__footer .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+
+/*======================================
+        SMALL MOBILE (400px)
+======================================*/
+
+@media (max-width:400px){
+
+    .inside-card,
+    .inside-card--featured{
+        height:210px;
+    }
+
+    .inside-Stackly__head .section-title{
+        font-size:26px;
+    }
+
+    .inside-card__overlay h3{
+        font-size:18px;
+    }
+
+    .inside-card__overlay span{
+        font-size:12px;
+    }
+
+}
