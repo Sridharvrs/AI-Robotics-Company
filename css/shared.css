@@ -160,7 +160,7 @@ width:115px;
   padding: 18px 40px;
   background: rgba(6,8,15,0.55);
   backdrop-filter: blur(14px);
-  border-bottom: 2px solid rgba(10, 126, 209, 0.233);
+  border-bottom: 3px solid rgba(63, 168, 244, 0.505);
   transition: background 0.3s ease;
 }
 .nav.scrolled { background: rgba(6,8,15,0.92); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
