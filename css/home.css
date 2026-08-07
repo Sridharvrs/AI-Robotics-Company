@@ -181,7 +181,13 @@ body {
   margin: 0 auto;
 }
 .cap-card {
-  background: var(--panel);
+  background:
+        linear-gradient(
+            145deg,
+            rgba(6, 19, 54, 0.95) 0%,
+            rgba(9, 31, 87, 0.96) 45%,
+            rgba(9, 35, 103, 0.98) 100%
+        );
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 34px 26px;
@@ -294,7 +300,13 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 30px;
-  background: var(--panel);
+ background:
+        linear-gradient(
+            145deg,
+            rgba(6, 19, 54, 0.95) 0%,
+            rgba(9, 31, 87, 0.96) 45%,
+            rgba(9, 35, 103, 0.98) 100%
+        );
   border: 1px solid var(--primary);
   box-shadow: 0 0 40px rgba(0, 229, 255, 0.4);
   display: flex;
@@ -333,7 +345,13 @@ body {
 .tab {
   padding: 12px 24px;
   border-radius: 30px;
-  background: var(--panel);
+ background:
+        linear-gradient(
+            145deg,
+            rgba(6, 19, 54, 0.95) 0%,
+            rgba(9, 31, 87, 0.96) 45%,
+            rgba(9, 35, 103, 0.98) 100%
+        );
   border: 1px solid var(--line);
   color: var(--muted);
   cursor: pointer;
@@ -355,7 +373,13 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
-  background: var(--panel);
+ background:
+        linear-gradient(
+            145deg,
+            rgba(6, 19, 54, 0.95) 0%,
+            rgba(9, 31, 87, 0.96) 45%,
+            rgba(9, 35, 103, 0.98) 100%
+        );
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 36px;
@@ -449,7 +473,13 @@ body {
 .metric {
   text-align: center;
   padding: 30px 16px;
-  background: var(--panel);
+ background:
+        linear-gradient(
+            145deg,
+            rgba(6, 19, 54, 0.95) 0%,
+            rgba(9, 31, 87, 0.96) 45%,
+            rgba(9, 35, 103, 0.98) 100%
+        );
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
@@ -977,7 +1007,13 @@ body {
 .robot-stat {
   text-align: center;
 
-  background: var(--panel);
+ background:
+        linear-gradient(
+            145deg,
+            rgba(6, 19, 54, 0.95) 0%,
+            rgba(9, 31, 87, 0.96) 45%,
+            rgba(9, 35, 103, 0.98) 100%
+        );
 
   border: 1px solid var(--line);
 
@@ -1575,6 +1611,13 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
+  background:
+        linear-gradient(
+            145deg,
+            rgba(6, 19, 54, 0.95) 0%,
+            rgba(9, 31, 87, 0.96) 45%,
+            rgba(9, 35, 103, 0.98) 100%
+        );
 }
 
 .ecosystem-card::before {
